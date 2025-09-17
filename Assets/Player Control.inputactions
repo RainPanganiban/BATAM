@@ -25,9 +25,9 @@
                 },
                 {
                     "name": "Crouch, Jump, Interact",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "4a5c949a-415e-4dd6-8ce2-86b32cbfde89",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
