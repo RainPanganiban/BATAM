@@ -427,6 +427,7 @@ MonoBehaviour:
   walkSpeed: 10
   sprintSpeed: 15
   mouseSensitivity: 0.3
+  lookInput: {x: 0, y: 0}
 --- !u!1 &6005859430298402076
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +556,7 @@ MonoBehaviour:
   sprintBobSpeed: 10
   sprintBobAmountY: 0.02
   sprintBobAmountX: 0.02
+  playerController: {fileID: 3215834713725251117}
 --- !u!1 &8063296532846849396
 GameObject:
   m_ObjectHideFlags: 0
