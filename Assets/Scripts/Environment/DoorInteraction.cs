@@ -8,17 +8,7 @@ public class DoorInteraction : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (ScreenFader.Instance != null)
-        {
-            ScreenFader.Instance.FadeOut(() =>
-            {
-                SceneManager.LoadScene(sceneToLoad);
-            });
-        }
-        else
-        {
             SceneManager.LoadScene(sceneToLoad);
-        }
     }
 
     public string GetPromptText()
