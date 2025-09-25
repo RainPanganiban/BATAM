@@ -9,11 +9,11 @@ public class PlayerController : MonoBehaviour
     public float mouseSensitivity = 2f;
 
     private CharacterController controller;
-    private Vector2 moveInput;
-    private Vector2 lookInput;
+    public Vector2 moveInput { get; private set; }
+    public Vector2 lookInput;
     private float xRotation = 0f;
     private Camera playerCamera;
-    private bool isSprinting = false;
+    public bool isSprinting { get; private set; }
 
     private void Awake()
     {
