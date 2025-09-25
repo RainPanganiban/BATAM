@@ -444,8 +444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a0aa768134b594dad0887452613f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 10
-  sprintSpeed: 15
+  walkSpeed: 5
+  sprintSpeed: 10
   mouseSensitivity: 0.3
   lookInput: {x: 0, y: 0}
 --- !u!1 &6005859430298402076
