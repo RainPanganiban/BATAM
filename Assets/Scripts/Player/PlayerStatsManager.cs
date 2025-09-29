@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class PlayerStatsManager : MonoBehaviour
 {
-    [Header("References")]
-    public PlayerController playerController; // link to movement/praying script
+    public PlayerController playerController;
 
     [Header("Settings")]
-    public float sanityDrainRate = 0.5f;   // sanity lost per second when near enemy
-    public float sanityRestoreRate = 2f;   // sanity gained per second when praying
-    public float staminaDrainRate = 10f;   // stamina lost per second when sprinting
-    public float staminaRegenRate = 5f;    // stamina regained per second when resting
+    public float sanityDrainRate = 0.5f; 
+    public float sanityRestoreRate = 2f; 
+    public float staminaDrainRate = 10f; 
+    public float staminaRegenRate = 5f;  
 
     void Update()
     {
@@ -35,14 +34,26 @@ public class PlayerStatsManager : MonoBehaviour
 
     void HandleStamina()
     {
-        // Sprint drains stamina
-        if (playerController.isSprinting)
+
+        if(playerController.isSprinting && GameManager.Instance.currentStamina > 0f)
         {
             GameManager.Instance.DecreaseStamina(staminaDrainRate * Time.deltaTime);
+
+            if (GameManager.Instance.currentStamina <= 0)
+            {
+                GameManager.Instance.currentStamina = 0f;
+                playerController.canSprint = false;
+            }
         }
         else
         {
             GameManager.Instance.IncreaseStamina(staminaRegenRate * Time.deltaTime);
+
+            if(GameManager.Instance.currentStamina >= 5f)
+            {
+                playerController.canSprint = true;
+            }
         }
+
     }
 }

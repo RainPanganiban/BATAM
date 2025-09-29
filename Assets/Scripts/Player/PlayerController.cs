@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private float xRotation = 0f;
     private Camera playerCamera;
     public bool isSprinting { get; private set; }
+    public bool canSprint = true;
 
     private void Awake()
     {
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         //galaw
-        float currentSpeed = isSprinting ? sprintSpeed : walkSpeed;
+        float currentSpeed = (isSprinting && canSprint) ? sprintSpeed : walkSpeed;
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
         controller.SimpleMove(move * currentSpeed);
 
