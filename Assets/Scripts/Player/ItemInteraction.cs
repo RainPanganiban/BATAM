@@ -26,7 +26,7 @@ public class ItemInteraction : MonoBehaviour, IInteractable
 
     public string GetPromptText()
     {
-        return "Pick up the " + (itemData != null ? itemData.itemName : "Item");
+        return "pick up the " + (itemData != null ? itemData.itemName : "Item");
     }
 
 }

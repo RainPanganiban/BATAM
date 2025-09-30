@@ -12,25 +12,24 @@ public class GameManager : MonoBehaviour
     public float currentStamina;
 
     [Header("Inventory")]
-    public string[] inventory = new string[3]; // 3 slots
+    public ItemData[] inventorySlots = new ItemData[3]; // 3 slots
 
     void Awake()
     {
-        // Make sure only one GameManager exists
+        
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // persists across scenes
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject); // prevents duplicates
+            Destroy(gameObject);
         }
     }
 
     void Start()
     {
-        // Initialize if not already set
         if (currentSanity == 0) currentSanity = maxSanity;
         if (currentStamina == 0) currentStamina = maxStamina;
     }
