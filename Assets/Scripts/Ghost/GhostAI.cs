@@ -16,6 +16,7 @@ public class GhostAI : MonoBehaviour
     private int patrolIndex = 0;
     private float patrolWait = 3f;
     private float patrolTimer;
+    private Vector3 lastMoveDirection = Vector3.forward;
 
     [Header("Chase Settings")]
     public float chaseSpeed = 2.5f;
@@ -24,6 +25,8 @@ public class GhostAI : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = true;
+        agent.updatePosition = true;
         patrolTimer = patrolWait;
         currentState = State.Patrol;
     }
@@ -61,6 +64,13 @@ public class GhostAI : MonoBehaviour
             }
         }
 
+        Vector3 velocity = agent.velocity;
+        if (velocity.sqrMagnitude > 0.01f)
+        {
+            Vector3 moveDir = velocity.normalized;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDir), Time.deltaTime * 5f);
+        }
+
         if (vision.CanSeePlayer(player))
         {
             currentState = State.Chase;
@@ -81,6 +91,13 @@ public class GhostAI : MonoBehaviour
     {
         agent.speed = chaseSpeed;
         agent.SetDestination(player.position);
+
+        Vector3 velocity = agent.velocity;
+        if (velocity.sqrMagnitude > 0.01f)
+        {
+            Vector3 moveDir = velocity.normalized;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDir), Time.deltaTime * 5f);
+        }
 
         if (!vision.CanSeePlayer(player))
         {
