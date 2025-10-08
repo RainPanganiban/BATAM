@@ -22,6 +22,12 @@ public class GhostAI : MonoBehaviour
     public float chaseSpeed = 2.5f;
     public float baseSpeed = 2.5f;
 
+    [Header("Detection Timing")]
+    public float timeToSpotPlayer = 2f;   // Must see player for 2s to chase
+    private float visibleTimer = 0f;
+    public float loseSightTime = 2f;
+    public float loseTimer = 0f;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -73,7 +79,18 @@ public class GhostAI : MonoBehaviour
 
         if (vision.CanSeePlayer(player))
         {
-            currentState = State.Chase;
+            visibleTimer += Time.deltaTime;
+
+            if (visibleTimer >= timeToSpotPlayer)
+            {
+                currentState = State.Chase;
+                visibleTimer = 0f;
+            }
+        }
+        else
+        {
+            // If ghost can't see player, reset timer slowly
+            visibleTimer = Mathf.Max(0, visibleTimer - Time.deltaTime);
         }
     }
 
@@ -101,7 +118,16 @@ public class GhostAI : MonoBehaviour
 
         if (!vision.CanSeePlayer(player))
         {
-            currentState = State.Patrol;
+            loseTimer += Time.deltaTime;
+            if (loseTimer >= loseSightTime)
+            {
+                currentState = State.Patrol;
+                loseTimer = 0f;
+            }
+        }
+        else
+        {
+            loseTimer = 0f;
         }
     }
 }
