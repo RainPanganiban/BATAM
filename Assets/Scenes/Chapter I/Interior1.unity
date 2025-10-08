@@ -874,10 +874,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 143669251883287302, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
-      propertyPath: proximityRadius
-      value: 4.5
-      objectReference: {fileID: 0}
     - target: {fileID: 3475174817492480691, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.13
@@ -926,14 +922,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 166019631}
-    - target: {fileID: 7418996115032688757, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
-      propertyPath: baseSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7418996115032688757, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
-      propertyPath: chaseSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 7418996115032688757, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
       propertyPath: 'patrolPoints.Array.data[0]'
       value: 

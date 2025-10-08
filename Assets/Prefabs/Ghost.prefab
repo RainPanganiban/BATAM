@@ -103,6 +103,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512
+  proximityRadius: 4.5
 --- !u!114 &7418996115032688757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,8 +122,8 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
-  chaseSpeed: 10
-  baseSpeed: 5
+  chaseSpeed: 8
+  baseSpeed: 3
   timeToSpotPlayer: 1
   loseSightTime: 2
   loseTimer: 2
