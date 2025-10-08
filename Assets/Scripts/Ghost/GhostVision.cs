@@ -8,23 +8,32 @@ public class GhostVision : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
+    [Header("Proximity Detection")]
+    public float proximityRadius = 3f;
+
     public bool CanSeePlayer(Transform player)
     {
         Vector3 dirToPlayer = (player.position - transform.position).normalized;
+        float distToPlayer = Vector3.Distance(transform.position, player.position);
 
+        // Always detect if player is within proximity radius
+        if (distToPlayer <= proximityRadius)
+            return true;
+
+        // Normal cone-based vision detection
         if (Vector3.Angle(transform.forward, dirToPlayer) < viewAngle / 2f)
         {
-            float distToPlayer = Vector3.Distance(transform.position, player.position);
-
             if (distToPlayer <= viewRadius)
             {
-                if(!Physics.Raycast(transform.position, dirToPlayer, distToPlayer, obstacleMask))
+                Vector3 origin = transform.position + Vector3.up * 0.5f; // eye height
+                if (!Physics.Raycast(origin, dirToPlayer, distToPlayer, obstacleMask))
                 {
-                    return true;
+                    return true; // Player visible in cone
                 }
             }
         }
-        return false;
+
+        return false; // Player not detected
     }
 
     private void OnDrawGizmosSelected()
@@ -49,6 +58,9 @@ public class GhostVision : MonoBehaviour
         // Optional: draw a line showing the forward direction
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + forward * viewRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, proximityRadius);
     }
 
     private Vector3 DirFromAngle(float angleInDegrees, bool global)
