@@ -1596,8 +1596,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b7a6e2c5e0524648b5e1dfd34263268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSanity: 100
-  currentSanity: 0
   baseDrainRate: 0.5
   nearGhostDrainMultiplier: 3
   prayerRestoreRate: 2
