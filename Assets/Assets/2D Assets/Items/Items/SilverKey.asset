@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ab030b2d982a324e8f51380574f6e6e, type: 3}
-  m_Name: Key
+  m_Name: SilverKey
   m_EditorClassIdentifier: 
-  itemName: Key
+  itemName: SilverKey
   icon: {fileID: 21300000, guid: 2ae2558955f396d4683eacecf448c551, type: 3}
   description: Used to open doors.
   chapterIndex: 0

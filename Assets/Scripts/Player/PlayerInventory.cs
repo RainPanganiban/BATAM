@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     public ItemData[] slots = new ItemData[3];
-
+    public HandManager handManager;
 
     void Start()
     {
@@ -11,6 +11,9 @@ public class PlayerInventory : MonoBehaviour
         {
             slots[i] = GameManager.Instance.inventorySlots[i];
         }
+
+        if (handManager == null)
+            handManager = FindObjectOfType<HandManager>();
     }
 
     public bool PickupItem(ItemData item)
@@ -26,4 +29,21 @@ public class PlayerInventory : MonoBehaviour
         }
         return false;
     }
+
+    public void SelectItem(int slotIndex)
+{
+    if (slotIndex < 0 || slotIndex >= slots.Length)
+        return;
+
+    ItemData selectedItem = slots[slotIndex];
+
+    if (selectedItem != null)
+    {
+        handManager.SetSelectedItem(selectedItem.itemName);
+    }
+    else
+    {
+        handManager.SetSelectedItem("");
+    }
+}
 }

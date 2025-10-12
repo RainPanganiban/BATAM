@@ -20,6 +20,8 @@ public class SanityAndPrayer : MonoBehaviour
 
     private bool nearGhost = false;
     private PlayerController playerMovement;
+    public HandManager handManager;
+
 
     //Task Manager
     [SerializeField] private TaskManager taskManager;
@@ -73,6 +75,7 @@ public class SanityAndPrayer : MonoBehaviour
         if (context.started)
         {
             StartPrayer();
+            handManager.SetPraying(true);
 
             if (!prayerTaskDone)
             {
@@ -87,6 +90,7 @@ public class SanityAndPrayer : MonoBehaviour
         else if (context.canceled)
         {
             StopPrayer();
+            handManager.SetPraying(false);
         }
     }
 

@@ -14,6 +14,7 @@ public class InventoryUI : MonoBehaviour
 
     public InventorySlotUI[] slots = new InventorySlotUI[3];
     public PlayerInventory playerInventory;
+    public HandManager handManager;
 
     private int selectedSlot = -1;
     private PlayerControl controls;
@@ -22,7 +23,6 @@ public class InventoryUI : MonoBehaviour
     {
         controls = new PlayerControl();
 
-        // Listen for input actions
         controls.UI.SelectSlot1.performed += ctx => SelectSlot(0);
         controls.UI.SelectSlot2.performed += ctx => SelectSlot(1);
         controls.UI.SelectSlot3.performed += ctx => SelectSlot(2);
@@ -33,7 +33,6 @@ public class InventoryUI : MonoBehaviour
 
     void Start()
     {
-        // Make sure all highlights are hidden at start
         for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].highlight != null)
@@ -60,21 +59,39 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    public void SelectItem(int slotIndex)
+    {
+        if (playerInventory == null) return;
+        if (slotIndex < 0 || slotIndex >= playerInventory.slots.Length) return;
+
+        // Get the actual item data from the PlayerInventory
+        ItemData selectedItem = playerInventory.slots[slotIndex];
+
+        if (selectedItem != null)
+            handManager.SetSelectedItem(selectedItem.itemName);
+        else
+            handManager.SetSelectedItem("");
+    }
+
     void SelectSlot(int index)
     {
-        // Disable highlight on all slots first
+        // Turn off all highlights first
         for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].highlight != null)
                 slots[i].highlight.gameObject.SetActive(false);
         }
 
-        // Enable highlight only on the selected one
+        // Activate selected highlight
         if (index >= 0 && index < slots.Length && slots[index].highlight != null)
         {
             slots[index].highlight.gameObject.SetActive(true);
             selectedSlot = index;
             Debug.Log($"Selected slot {index + 1}");
+
+            // Tell PlayerInventory to update the hand
+            if (playerInventory != null)
+                playerInventory.SelectItem(index);
         }
     }
 }
