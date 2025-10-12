@@ -40,8 +40,10 @@ public class PlayerController : MonoBehaviour
         if (!moveTaskDone && moveInput.magnitude > 0.1f)
         {
             moveTaskDone = true;
-            if (taskManager != null && taskManager.IsCurrentTask(1))
+            if (taskManager != null)
+            {
                 taskManager.MarkTaskCompleted(1);
+            }
         }
     }
 
@@ -52,8 +54,10 @@ public class PlayerController : MonoBehaviour
         if (!lookTaskDone && lookInput.magnitude > 0.1f)
         {
             lookTaskDone = true;
-            if (taskManager != null && taskManager.IsCurrentTask(0))
+            if (taskManager != null)
+            {
                 taskManager.MarkTaskCompleted(0);
+            }
         }
     }
 
@@ -66,8 +70,10 @@ public class PlayerController : MonoBehaviour
             if (!sprintTaskDone)
             {
                 sprintTaskDone = true;
-                if (taskManager != null && taskManager.IsCurrentTask(3))
+                if (taskManager != null)
+                {
                     taskManager.MarkTaskCompleted(3);
+                }
             }
         }
         else if (context.canceled)

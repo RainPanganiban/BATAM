@@ -1328,7 +1328,7 @@ GameObject:
   - component: {fileID: 4223146305969924285}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2174,6 +2174,8 @@ MonoBehaviour:
     - Interact with objects using "E" pick up the lamp at the table.
     - Press "LSHIFT" to sprint.
     - Press "F" to pray and regain your sanity,
+    - Pick up the silver key.
+    - Go to the town gate.
   - chapterName: Chapter II
     tasks: []
   - chapterName: Chapter III

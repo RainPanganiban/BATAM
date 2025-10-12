@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class TaskManager : MonoBehaviour
@@ -12,12 +11,12 @@ public class TaskManager : MonoBehaviour
         public List<string> tasks = new List<string>();
     }
 
-    public TextMeshProUGUI taskText;                // Reference to the UI Text
-    public List<Chapter> chapters;       // Holds all chapter tasks
-    private int currentChapterIndex = 0; // Track which chapter we’re in
-    private int currentTaskIndex = 0;
+    public TextMeshProUGUI taskText;
+    public List<Chapter> chapters;
 
-    private HashSet<string> completedTasks;
+    private int currentChapterIndex = 0;
+    private int currentTaskIndex = 0;
+    private HashSet<string> completedTasks = new HashSet<string>();
 
     void Start()
     {
@@ -25,10 +24,10 @@ public class TaskManager : MonoBehaviour
         {
             currentChapterIndex = GameManager.Instance.currentChapterIndex;
             currentTaskIndex = GameManager.Instance.currentTaskIndex;
-
             completedTasks = GameManager.Instance.completedTasks;
         }
 
+        // ensure we show an unfinished task
         SkipCompletedTasks();
         DisplayCurrentTask();
     }
@@ -38,7 +37,7 @@ public class TaskManager : MonoBehaviour
         if (currentChapterIndex < chapters.Count &&
             currentTaskIndex < chapters[currentChapterIndex].tasks.Count)
         {
-            taskText.text = $"Chapter Task: \n\n {chapters[currentChapterIndex].tasks[currentTaskIndex]}";
+            taskText.text = $"Chapter Task:\n\n{chapters[currentChapterIndex].tasks[currentTaskIndex]}";
         }
         else
         {
@@ -50,6 +49,7 @@ public class TaskManager : MonoBehaviour
     {
         string key = $"{currentChapterIndex}-{taskIndex}";
 
+        // If already marked complete, skip
         if (completedTasks.Contains(key))
             return;
 
@@ -58,34 +58,39 @@ public class TaskManager : MonoBehaviour
         if (GameManager.Instance != null)
             GameManager.Instance.completedTasks = completedTasks;
 
+        // Check if this was the current task
         if (taskIndex == currentTaskIndex)
         {
-            AdvanceToNextUncompletedTask();
+            AdvanceToNextTask();  // normal progression
+        }
+        else if (taskIndex > currentTaskIndex)
+        {
+            // Future task done early — no UI update yet
+            return;
+        }
+        else
+        {
+            // Task done in the past (no effect)
+            return;
         }
     }
 
-    private void AdvanceToNextUncompletedTask()
+    private void AdvanceToNextTask()
     {
-        string key;
-        do
+        currentTaskIndex++;
+
+        // Move to next chapter if needed
+        if (currentChapterIndex < chapters.Count &&
+            currentTaskIndex >= chapters[currentChapterIndex].tasks.Count)
         {
-            currentTaskIndex++;
+            currentChapterIndex++;
+            currentTaskIndex = 0;
+        }
 
-            // Move to next chapter if needed
-            if (currentChapterIndex < chapters.Count &&
-                currentTaskIndex >= chapters[currentChapterIndex].tasks.Count)
-            {
-                currentChapterIndex++;
-                currentTaskIndex = 0;
-            }
+        // Here's the key fix: skip all already completed tasks
+        SkipCompletedTasks();
 
-            key = $"{currentChapterIndex}-{currentTaskIndex}";
-
-        } while (completedTasks.Contains(key) &&
-                 currentChapterIndex < chapters.Count &&
-                 currentTaskIndex < chapters[currentChapterIndex].tasks.Count);
-
-        // Save new state to GameManager
+        // Save progress
         if (GameManager.Instance != null)
         {
             GameManager.Instance.currentChapterIndex = currentChapterIndex;
@@ -99,10 +104,12 @@ public class TaskManager : MonoBehaviour
     {
         string key = $"{currentChapterIndex}-{currentTaskIndex}";
 
+        // Keep advancing until we find a task that isn't done
         while (completedTasks.Contains(key))
         {
             currentTaskIndex++;
 
+            // If end of chapter, move to next
             if (currentChapterIndex < chapters.Count &&
                 currentTaskIndex >= chapters[currentChapterIndex].tasks.Count)
             {
@@ -112,21 +119,5 @@ public class TaskManager : MonoBehaviour
 
             key = $"{currentChapterIndex}-{currentTaskIndex}";
         }
-
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.currentChapterIndex = currentChapterIndex;
-            GameManager.Instance.currentTaskIndex = currentTaskIndex;
-        }
-    }
-
-    public bool IsTaskCompleted(int taskIndex)
-    {
-        return completedTasks.Contains($"{currentChapterIndex}-{taskIndex}");
-    }
-
-    public bool IsCurrentTask(int taskIndex)
-    {
-        return currentTaskIndex == taskIndex;
     }
 }

@@ -78,9 +78,9 @@ public class SanityAndPrayer : MonoBehaviour
             {
                 prayerTaskDone = true;
 
-                if (taskManager != null && taskManager.IsCurrentTask(4)) // task #5 = index 4
+                if (taskManager != null)
                 {
-                    taskManager.MarkTaskCompleted(4);
+                    taskManager.MarkTaskCompleted(4); // task #5 = index 4
                 }
             }
         }

@@ -2665,6 +2665,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 520647290}
   m_SourcePrefab: {fileID: 100100000, guid: 1d64ac8a3fcac974cb6bec9c14b924c1, type: 3}
+--- !u!114 &406070816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6057148608142690943, guid: 69a8ad74d31ee1441929770fd8659769, type: 3}
+  m_PrefabInstance: {fileID: 294550698}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01faaae0be6992340a9eeb1b9a4d261c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &409039814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3475,7 +3486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be05bd2db6b71cf488c8941709c58790, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.00003
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be05bd2db6b71cf488c8941709c58790, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4601,6 +4612,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4ed98da8d41f984b85353e58f0f20a8, type: 3}
+--- !u!1 &728520171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 728520174}
+  - component: {fileID: 728520173}
+  - component: {fileID: 728520172}
+  m_Layer: 0
+  m_Name: GateTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &728520172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728520171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f9c0931e763924dbaa295c76703c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskIndex: 6
+  oneTime: 1
+  taskManager: {fileID: 406070816}
+--- !u!65 &728520173
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728520171}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.22, y: 4.69, z: 15.08}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &728520174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728520171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.71, y: 2.21, z: 14.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &729834425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6999485380177463470, guid: b4ed98da8d41f984b85353e58f0f20a8, type: 3}
@@ -11085,3 +11165,4 @@ SceneRoots:
   - {fileID: 201446399}
   - {fileID: 1869600872}
   - {fileID: 863532236377590443}
+  - {fileID: 728520174}
