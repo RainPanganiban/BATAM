@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,12 @@ public class GameManager : MonoBehaviour
 
     [Header("Inventory")]
     public ItemData[] inventorySlots = new ItemData[3]; // 3 slots
+
+    //Persistent task
+    public int currentChapterIndex = 0;
+    public int currentTaskIndex = 0;
+
+    public HashSet<string> completedTasks = new HashSet<string>();
 
     void Awake()
     {

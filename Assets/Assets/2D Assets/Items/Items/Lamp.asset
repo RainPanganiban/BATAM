@@ -17,3 +17,5 @@ MonoBehaviour:
   description: 'Provides light to the player
 
 '
+  chapterIndex: 0
+  taskIndex: 2

@@ -21,9 +21,14 @@ public class SanityAndPrayer : MonoBehaviour
     private bool nearGhost = false;
     private PlayerController playerMovement;
 
+    //Task Manager
+    [SerializeField] private TaskManager taskManager;
+    private bool prayerTaskDone = false;
+
     void Start()
     {
         playerMovement = GetComponent<PlayerController>();
+        taskManager = FindObjectOfType<TaskManager>();
 
         if (sanityBar != null)
         {
@@ -68,6 +73,16 @@ public class SanityAndPrayer : MonoBehaviour
         if (context.started)
         {
             StartPrayer();
+
+            if (!prayerTaskDone)
+            {
+                prayerTaskDone = true;
+
+                if (taskManager != null && taskManager.IsCurrentTask(4)) // task #5 = index 4
+                {
+                    taskManager.MarkTaskCompleted(4);
+                }
+            }
         }
         else if (context.canceled)
         {

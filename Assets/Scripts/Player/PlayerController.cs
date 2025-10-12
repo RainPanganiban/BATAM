@@ -16,20 +16,45 @@ public class PlayerController : MonoBehaviour
     public bool isSprinting { get; private set; }
     public bool canSprint = true;
 
+    //Task system
+    [SerializeField]  private TaskManager taskManager;
+    private bool lookTaskDone = false;
+    private bool moveTaskDone = false;
+    private bool sprintTaskDone = false;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
         playerCamera = GetComponentInChildren<Camera>();
     }
 
+    private void Start()
+    {
+        taskManager = FindObjectOfType<TaskManager>();
+    }
+
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+
+        if (!moveTaskDone && moveInput.magnitude > 0.1f)
+        {
+            moveTaskDone = true;
+            if (taskManager != null && taskManager.IsCurrentTask(1))
+                taskManager.MarkTaskCompleted(1);
+        }
     }
 
     public void OnLook(InputAction.CallbackContext context)
     {
         lookInput = context.ReadValue<Vector2>();
+
+        if (!lookTaskDone && lookInput.magnitude > 0.1f)
+        {
+            lookTaskDone = true;
+            if (taskManager != null && taskManager.IsCurrentTask(0))
+                taskManager.MarkTaskCompleted(0);
+        }
     }
 
     public void OnSprint(InputAction.CallbackContext context)
@@ -37,6 +62,13 @@ public class PlayerController : MonoBehaviour
         if (context.started)
         {
             isSprinting = true;
+
+            if (!sprintTaskDone)
+            {
+                sprintTaskDone = true;
+                if (taskManager != null && taskManager.IsCurrentTask(3))
+                    taskManager.MarkTaskCompleted(3);
+            }
         }
         else if (context.canceled)
         {

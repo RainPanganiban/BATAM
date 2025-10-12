@@ -4,6 +4,13 @@ using UnityEngine.UIElements;
 public class ItemInteraction : MonoBehaviour, IInteractable
 {
     public ItemData itemData;
+    [SerializeField] private TaskManager taskManager;
+
+    private void Start()
+    {
+        // Find the TaskManager once
+        taskManager = FindObjectOfType<TaskManager>();
+    }
 
     public void Interact()
     {
@@ -15,6 +22,12 @@ public class ItemInteraction : MonoBehaviour, IInteractable
             if (inventory.PickupItem(itemData))
             {
                 Debug.Log("picked up: " + itemData.itemName);
+
+                if (taskManager != null && itemData.taskIndex >= 0)
+                {
+                    taskManager.MarkTaskCompleted(itemData.taskIndex);
+                }
+
                 Destroy(gameObject);
             }
             else
