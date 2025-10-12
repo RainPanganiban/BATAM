@@ -224,6 +224,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8879466462260333171, guid: 69a8ad74d31ee1441929770fd8659769, type: 3}
+      propertyPath: enableFogControl
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
