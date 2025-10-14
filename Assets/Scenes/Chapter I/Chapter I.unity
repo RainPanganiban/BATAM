@@ -7726,6 +7726,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6999485380177463470, guid: b4ed98da8d41f984b85353e58f0f20a8, type: 3}
   m_PrefabInstance: {fileID: 41154595}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1396776099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1396776103}
+  - component: {fileID: 1396776102}
+  - component: {fileID: 1396776100}
+  m_Layer: 0
+  m_Name: Border
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1396776100
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396776099}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1396776102
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396776099}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1396776103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396776099}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.96432686, z: 0, w: -0.2647146}
+  m_LocalPosition: {x: -38.9, y: 2.314, z: -52.5}
+  m_LocalScale: {x: 163.1, y: 35.68, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -210.7, z: 0}
 --- !u!4 &1397060089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6999485380177463470, guid: b4ed98da8d41f984b85353e58f0f20a8, type: 3}
@@ -11236,3 +11299,4 @@ SceneRoots:
   - {fileID: 1869600872}
   - {fileID: 863532236377590443}
   - {fileID: 728520174}
+  - {fileID: 1396776103}
