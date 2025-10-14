@@ -2149,14 +2149,18 @@ MonoBehaviour:
   handItems:
   - itemName: Lamp
     handObject: {fileID: 6005859430298402076}
-  - itemName: SilverKey
+  - itemName: Silver Key
     handObject: {fileID: 3099420986025972474}
+  - itemName: Bread
+    handObject: {fileID: 1760192597176317964}
+  - itemName: Pills
+    handObject: {fileID: 8763921592118875676}
   defaultHand: {fileID: 5542953629063468271}
   prayingHand: {fileID: 3579755788768039329}
   playerLight: {fileID: 7911026848588812671}
   enableFogControl: 1
   defaultFogDensity: 0.1
-  lampFogDensity: 0.0623
+  lampFogDensity: 0.06
 --- !u!1 &4425822644353643207
 GameObject:
   m_ObjectHideFlags: 0

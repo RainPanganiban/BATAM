@@ -20,8 +20,8 @@ public class HandManager : MonoBehaviour
     [Header("Lighting and Environment Settings")]
     public GameObject playerLight;        // The player’s light source (e.g., flashlight or lamp light)
     public bool enableFogControl = true;  // Optional toggle for fog control
-    [Range(0f, 0.1f)] public float defaultFogDensity = 0.04f;
-    [Range(0f, 0.1f)] public float lampFogDensity = 0.01f;
+    [Range(0f, 1.1f)] public float defaultFogDensity = 0.04f;
+    [Range(0f, 1.1f)] public float lampFogDensity = 0.01f;
 
     private Dictionary<string, GameObject> handLookup = new Dictionary<string, GameObject>();
     private GameObject currentActiveHand;

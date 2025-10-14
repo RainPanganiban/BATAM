@@ -13,7 +13,7 @@ public class DoorInteraction : MonoBehaviour, IInteractable
 
     public string GetPromptText()
     {
-        return "Press E to Enter";
+        return "interact to enter";
     }
 
 }
