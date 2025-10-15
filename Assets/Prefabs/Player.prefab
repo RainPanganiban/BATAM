@@ -1848,6 +1848,7 @@ GameObject:
   - component: {fileID: 5920797933837512822}
   - component: {fileID: 4223146305969924285}
   - component: {fileID: 8879466462260333171}
+  - component: {fileID: 5568251424505274296}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -2161,6 +2162,18 @@ MonoBehaviour:
   enableFogControl: 1
   defaultFogDensity: 0.13
   lampFogDensity: 0.05
+--- !u!114 &5568251424505274296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4316186284062893365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6a57edf3fa2e14582a487ad5919686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4425822644353643207
 GameObject:
   m_ObjectHideFlags: 0

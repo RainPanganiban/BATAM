@@ -15,8 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter I/Chapter I.unity
     guid: dfdd33fa6079e914f8c32ca9d20af7a2
   - enabled: 1
-    path: Assets/Scenes/Chapter I/InsideGate.unity
+    path: Assets/Scenes/Chapter II/InsideGate.unity
     guid: 5583e30201e6b0f4b84af7cc0decd8d1
+  - enabled: 1
+    path: Assets/Scenes/Chapter II/In-GuardHouse.unity
+    guid: 7ff6cc75b5833b14fba542fe64a5359c
+  - enabled: 1
+    path: Assets/Scenes/Chapter II/Out-GuardHouse.unity
+    guid: 723a09731650bc04dae7a699761c2aef
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

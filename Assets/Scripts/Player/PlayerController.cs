@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         playerCamera = GetComponentInChildren<Camera>();
+
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
