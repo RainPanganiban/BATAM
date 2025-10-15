@@ -2159,8 +2159,8 @@ MonoBehaviour:
   prayingHand: {fileID: 3579755788768039329}
   playerLight: {fileID: 7911026848588812671}
   enableFogControl: 1
-  defaultFogDensity: 0.1
-  lampFogDensity: 0.06
+  defaultFogDensity: 0.13
+  lampFogDensity: 0.05
 --- !u!1 &4425822644353643207
 GameObject:
   m_ObjectHideFlags: 0
