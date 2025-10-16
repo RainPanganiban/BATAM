@@ -11,12 +11,30 @@ public class TaskManager : MonoBehaviour
         public List<string> tasks = new List<string>();
     }
 
+    private static TaskManager instance;
+    public static TaskManager Instance => instance;
+
     public TextMeshProUGUI taskText;
     public List<Chapter> chapters;
 
     private int currentChapterIndex = 0;
     private int currentTaskIndex = 0;
     private HashSet<string> completedTasks = new HashSet<string>();
+
+
+    private void Awake()
+    {
+        // Singleton setup — ensures only one TaskManager exists
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); // Keep across scenes
+        }
+        else
+        {
+            Destroy(gameObject); // Prevent duplicates
+        }
+    }
 
     void Start()
     {
