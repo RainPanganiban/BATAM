@@ -24,7 +24,7 @@ public class DoorInteraction : MonoBehaviour, IInteractable
 
     public string GetPromptText()
     {
-        return "interact to enter";
+        return "interact to enter \n [ E ]";
     }
 
 }

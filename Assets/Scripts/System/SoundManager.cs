@@ -10,20 +10,22 @@ public class SoundManager : MonoBehaviour
     public AudioClip exteriorAmbience;
     public AudioClip interiorAmbience;
 
-    /*
-    [Header("Footstep Sounds")]
+    [Header("Footstep Sounds (Looping)")]
     public AudioSource footstepSource;
-    public AudioClip[] walkClips;
-    public AudioClip[] sprintClips;
-    public float footstepIntervalWalk = 0.5f;
-    public float footstepIntervalSprint = 0.3f;
+    public AudioClip woodWalkClip;
+    public AudioClip woodSprintClip;
+    public AudioClip dirtWalkClip;
+    public AudioClip dirtSprintClip;
 
-    private float footstepTimer;
-    */
+    private AudioClip currentWalkClip;
+    private AudioClip currentSprintClip;
+
+    private bool isMoving;
+    private bool isSprinting;
+    private bool isInside;
 
     void Awake()
     {
-        // Singleton pattern
         if (Instance == null)
         {
             Instance = this;
@@ -36,56 +38,70 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    // Automatically detect scene type when it loads
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         GameObject[] interiors = GameObject.FindGameObjectsWithTag("Interior");
         GameObject[] exteriors = GameObject.FindGameObjectsWithTag("Exterior");
 
         if (interiors.Length > 0)
-        {
             SetInterior(true);
-        }
         else if (exteriors.Length > 0)
-        {
             SetInterior(false);
-        }
         else
-        {
-            Debug.LogWarning("No Interior or Exterior tag found in scene. Defaulting to exterior ambience.");
             SetInterior(false);
-        }
     }
 
-    // Ambient handling
     private void SetInterior(bool inside)
     {
+        isInside = inside;
+
+        // Ambient
         ambientSource.clip = inside ? interiorAmbience : exteriorAmbience;
         ambientSource.loop = true;
         ambientSource.Play();
+
+        // Footstep setup
+        currentWalkClip = inside ? woodWalkClip : dirtWalkClip;
+        currentSprintClip = inside ? woodSprintClip : dirtSprintClip;
     }
 
-    /* Footsteps handling
-    public void HandleFootsteps(bool isMoving, bool isSprinting)
+    public void UpdateFootsteps(bool moving, bool sprinting)
     {
-        if (!isMoving)
+        if (moving && !isMoving)
         {
-            footstepTimer = 0;
-            return;
+            // Player just started moving
+            isMoving = true;
+            PlayFootstep(sprinting);
         }
-
-        footstepTimer -= Time.deltaTime;
-
-        if (footstepTimer <= 0f)
+        else if (!moving && isMoving)
         {
-            AudioClip[] clips = isSprinting ? sprintClips : walkClips;
-            if (clips.Length > 0)
-            {
-                footstepSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
-            }
-
-            footstepTimer = isSprinting ? footstepIntervalSprint : footstepIntervalWalk;
+            // Player just stopped
+            isMoving = false;
+            StopFootstep();
         }
-    } 
-    */
+        else if (moving && sprinting != isSprinting)
+        {
+            // Player switched between walk/sprint
+            isSprinting = sprinting;
+            PlayFootstep(sprinting);
+        }
+    }
+
+    private void PlayFootstep(bool sprinting)
+    {
+        isSprinting = sprinting;
+        AudioClip clip = sprinting ? currentSprintClip : currentWalkClip;
+
+        if (clip != null)
+        {
+            footstepSource.clip = clip;
+            footstepSource.loop = true;
+            footstepSource.Play();
+        }
+    }
+
+    private void StopFootstep()
+    {
+        footstepSource.Stop();
+    }
 }

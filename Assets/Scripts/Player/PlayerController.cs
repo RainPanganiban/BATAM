@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     public bool isSprinting { get; private set; }
     public bool canSprint = true;
 
+    private bool isMoving;
+    //private float moveCheckDelay = 0.1f;
+    //private float moveCheckTimer;
+
     //Task system
     [SerializeField]  private TaskManager taskManager;
     private bool lookTaskDone = false;
@@ -37,13 +41,23 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
 
-        if (!moveTaskDone && moveInput.magnitude > 0.1f)
+        if (context.performed)
         {
-            moveTaskDone = true;
-            if (taskManager != null)
+            isMoving = moveInput.magnitude > 0.1f;
+
+            if (!moveTaskDone && isMoving)
             {
-                taskManager.MarkTaskCompleted(1);
+                moveTaskDone = true;
+                if (taskManager != null)
+                {
+                    taskManager.MarkTaskCompleted(1);
+                }
             }
+        }
+        else if (context.canceled)
+        {
+            moveInput = Vector2.zero;
+            isMoving = false;
         }
     }
 
@@ -100,5 +114,9 @@ public class PlayerController : MonoBehaviour
         playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
 
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.UpdateFootsteps(isMoving, isSprinting);
+        }
     }
 }
