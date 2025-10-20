@@ -7,7 +7,7 @@ public class GhostAI : MonoBehaviour
     public State currentState = State.Patrol;
 
     [Header("References")]
-    public Transform player;
+    private Transform player;
     public GhostVision vision;
     private NavMeshAgent agent;
 
@@ -39,6 +39,20 @@ public class GhostAI : MonoBehaviour
 
     private void Update()
     {
+        if (player == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+            {
+                player = playerObj.transform;
+            }
+            else
+            {
+                // No player found yet, skip AI logic this frame
+                return;
+            }
+        }
+
         switch (currentState)
         {
             case State.Patrol:
