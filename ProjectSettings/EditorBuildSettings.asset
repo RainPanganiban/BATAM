@@ -21,8 +21,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter II/In-GuardHouse.unity
     guid: 7ff6cc75b5833b14fba542fe64a5359c
   - enabled: 1
-    path: Assets/Scenes/Chapter II/Out-GuardHouse.unity
-    guid: 723a09731650bc04dae7a699761c2aef
+    path: Assets/Scenes/Chapter II/In-Chapel.unity
+    guid: 60acb35a890bf87489571433ed96f197
+  - enabled: 1
+    path: Assets/Scenes/Chapter II/In-PriestHQ.unity
+    guid: b372779ebe8d353498b1dd8130fbeb0b
+  - enabled: 1
+    path: Assets/Scenes/Chapter II/In-Storage.unity
+    guid: 1d8abfe2e9a641a4eb86cdb28ef6e81a
+  - enabled: 1
+    path: Assets/Scenes/Chapter II/In-Bunker.unity
+    guid: 8b814e9119cef6d48b9d448690417e16
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
