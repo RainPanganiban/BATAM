@@ -158,6 +158,10 @@ MonoBehaviour:
     - Press "F" to pray and regain sanity.
     - Pick up the silver key.
     - Go to the town gate.
+    - Investigate the Chapel.
+    - Pick up the cross.
+    - Find the key.
+    - Investigate the Priest's Quarter.
 --- !u!1 &7873613992541436728
 GameObject:
   m_ObjectHideFlags: 0

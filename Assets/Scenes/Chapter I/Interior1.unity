@@ -1448,7 +1448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: chapters.Array.data[0].tasks.Array.size
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: chapters.Array.data[1].tasks.Array.size
@@ -1460,7 +1460,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[0].tasks.Array.data[8]'
-      value: Investigate the Chapel.
+      value: Pick up the cross.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[0].tasks.Array.data[9]'
+      value: Find the key.
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[1].tasks.Array.data[0]'
@@ -1489,6 +1493,10 @@ PrefabInstance:
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[1].tasks.Array.data[6]'
       value: Go to the town gate.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[0].tasks.Array.data[10]'
+      value: Investigate the Priest's Quarter.
       objectReference: {fileID: 0}
     - target: {fileID: 8849731593366039807, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: m_LocalPosition.x
