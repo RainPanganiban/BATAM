@@ -94,4 +94,25 @@ public class InventoryUI : MonoBehaviour
                 playerInventory.SelectItem(index);
         }
     }
+
+    public int GetSelectedSlotIndex()
+    {
+        return selectedSlot;
+    }
+
+    public void RefreshUI()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (i < playerInventory.slots.Length && playerInventory.slots[i] != null)
+            {
+                slots[i].icon.sprite = playerInventory.slots[i].icon;
+                slots[i].icon.enabled = true;
+            }
+            else
+            {
+                slots[i].icon.enabled = false;
+            }
+        }
+    }
 }

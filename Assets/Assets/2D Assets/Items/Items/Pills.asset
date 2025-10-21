@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Pills
   icon: {fileID: 21300000, guid: 5800702457b435f47a3e6f91e93592df, type: 3}
   description: Replenish sanity
+  itemEffect: {fileID: 11400000, guid: 14ea4f2aae518444d9ba9ce712e1e11e, type: 2}
   chapterIndex: 0
   taskIndex: -1

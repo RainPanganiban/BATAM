@@ -2126,6 +2126,7 @@ GameObject:
   - component: {fileID: 5920797933837512822}
   - component: {fileID: 4223146305969924285}
   - component: {fileID: 8879466462260333171}
+  - component: {fileID: 1530879421921337041}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -2289,6 +2290,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 4c749b7b-bc3f-4b2f-b2b6-81069e6c8192
     m_ActionName: 'UI/SelectSlot3[/Keyboard/3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8f4c5cd5-43b3-4097-a6e7-41fd57a44244
+    m_ActionName: 'Player/UseItem[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -2441,6 +2446,20 @@ MonoBehaviour:
   enableFogControl: 1
   defaultFogDensity: 0.13
   lampFogDensity: 0.05
+--- !u!114 &1530879421921337041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4316186284062893365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d09fa2fccb4b144393f99f03937413f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInventory: {fileID: 5920797933837512822}
+  inventoryUI: {fileID: 4738289721818403159}
 --- !u!1 &4425822644353643207
 GameObject:
   m_ObjectHideFlags: 0

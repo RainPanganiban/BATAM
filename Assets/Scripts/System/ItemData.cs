@@ -6,8 +6,9 @@ public class ItemData : ScriptableObject
     public string itemName;
     public Sprite icon;
     [TextArea] public string description;
+    public ItemEffect itemEffect;
 
-    [Header("Task Integration (Optional)")]
+
     [Tooltip("Chapter index this item belongs to (starts at 0).")]
     public int chapterIndex = 0;
 
