@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public ItemData[] slots = new ItemData[3];
+    public ItemData[] slots = new ItemData[4];
     public HandManager handManager;
 
     void Start()

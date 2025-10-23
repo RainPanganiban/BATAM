@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 9af23ba5fa5364ff598888460e0e2759, type: 2}
@@ -181,7 +181,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -618,6 +618,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64f575103d7a9a7459d0d2415b8cff24, type: 3}
       insertIndex: -1
       addedObject: {fileID: 166467888}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64f575103d7a9a7459d0d2415b8cff24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2126295023}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 64f575103d7a9a7459d0d2415b8cff24, type: 3}
       insertIndex: -1
@@ -671,6 +674,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3454373280049514411, guid: fc4bfd649ab601a4592c823d36e06e0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -3281606763684959283, guid: fc4bfd649ab601a4592c823d36e06e0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1027670237593135938, guid: fc4bfd649ab601a4592c823d36e06e0b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.609
@@ -679,9 +690,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CABINETANIMATIONPART2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fc4bfd649ab601a4592c823d36e06e0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1563203483433336983, guid: fc4bfd649ab601a4592c823d36e06e0b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.609
+      objectReference: {fileID: 0}
+    - target: {fileID: 8197336032272071069, guid: fc4bfd649ab601a4592c823d36e06e0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -692,7 +711,10 @@ PrefabInstance:
       addedObject: {fileID: 1761473970}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc4bfd649ab601a4592c823d36e06e0b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1761473969}
+      addedObject: {fileID: 1761473974}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc4bfd649ab601a4592c823d36e06e0b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1761473973}
     - targetCorrespondingSourceObject: {fileID: -3454373280049514411, guid: fc4bfd649ab601a4592c823d36e06e0b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1456098068}
@@ -708,28 +730,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fc4bfd649ab601a4592c823d36e06e0b, type: 3}
   m_PrefabInstance: {fileID: 1761473967}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1761473969
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761473968}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!95 &1761473970
 Animator:
   serializedVersion: 7
@@ -752,6 +752,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1761473973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761473968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68998e0ddbc6dcc409861a329e9fe0c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1761473970}
+  boolName: isOpen
+--- !u!65 &1761473974
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761473968}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.55, y: 3.89, z: 3.27}
+  m_Center: {x: 0, y: 1.59, z: 0}
 --- !u!1001 &1954717782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -952,12 +987,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126295022}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7660445, z: -0, w: -0.6427876}
-  m_LocalPosition: {x: 5.89, y: 2.37, z: 5.56}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.06162846, y: 0.70441604, z: -0.70441604, w: 0.06162843}
+  m_LocalPosition: {x: -4.462995, y: 36.668785, z: -1.9093647}
+  m_LocalScale: {x: 0.8243493, y: 0.8056393, z: 5.171992}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1997152560}
   m_LocalEulerAnglesHint: {x: 0, y: 260, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -966,7 +1001,6 @@ SceneRoots:
   - {fileID: 1738903543}
   - {fileID: 2101932691}
   - {fileID: 202450615}
-  - {fileID: 2126295023}
   - {fileID: 1172494873}
   - {fileID: 219560864}
   - {fileID: 1954717782}
