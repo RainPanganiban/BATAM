@@ -7,8 +7,23 @@ public class DoorInteraction : MonoBehaviour, IInteractable
     public string sceneToLoad;
     public string spawnPointName;
 
+    private Door doorScript;
+
+    private void Start()
+    {
+        doorScript = GetComponent<Door>();
+    }
+
     public void Interact()
     {
+        if (doorScript != null && doorScript.isLocked)
+        {
+            // Door is locked — show popup instead of entering
+            PopupManager.Instance?.ShowMessage("The door is locked.");
+            Debug.Log($"Door '{doorScript.doorID}' is locked.");
+            return; // stop here
+        }
+
         Debug.Log("Next spawn point: " + spawnPointName);
         if (SpawnPointManager.Instance != null)
         {

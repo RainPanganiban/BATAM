@@ -10,32 +10,57 @@ public class UnlockDoorEffect : ItemEffect
 
     public override void Use(GameObject user)
     {
+        // Find doors near the player
         Collider[] hits = Physics.OverlapSphere(user.transform.position, searchRadius);
-
-        foreach (var c in hits)
+        foreach (Collider hit in hits)
         {
-            Door door = c.GetComponent<Door>();
+            Door door = hit.GetComponent<Door>();
             if (door != null)
             {
+                // Correct door
                 if (door.doorID == doorID)
                 {
                     if (door.isLocked)
                     {
                         door.Unlock();
                         PopupManager.Instance?.ShowMessage(successMessage);
-                        Debug.Log($"Unlocked door '{doorID}' with key.");
+
+                        // Consume the key
+                        ConsumeKey(user, this);
+
+                        return;
                     }
                     else
                     {
-                        PopupManager.Instance?.ShowMessage("Door is already unlocked.");
+                        PopupManager.Instance?.ShowMessage("The door is already unlocked.");
+                        return;
                     }
-                    return;
                 }
             }
         }
 
-        // No matching door found nearby
+        // No matching locked door nearby
         PopupManager.Instance?.ShowMessage(failMessage);
-        Debug.Log("No matching locked door nearby!");
+    }
+
+    private void ConsumeKey(GameObject user, ItemEffect usedEffect)
+    {
+        PlayerInventory playerInventory = user.GetComponent<PlayerInventory>();
+        InventoryUI inventoryUI = FindObjectOfType<InventoryUI>();
+
+        if (playerInventory == null || inventoryUI == null) return;
+
+        for (int i = 0; i < playerInventory.slots.Length; i++)
+        {
+            ItemData item = playerInventory.slots[i];
+            if (item != null && item.itemEffect == usedEffect)
+            {
+                playerInventory.slots[i] = null;
+                GameManager.Instance.inventorySlots[i] = null;
+                inventoryUI.RefreshUI();
+                Debug.Log("Key consumed from slot " + i);
+                return;
+            }
+        }
     }
 }

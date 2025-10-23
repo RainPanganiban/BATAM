@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorID: DefaultDoor
-  isLocked: 1
+  isLocked: 0
 --- !u!4 &410892824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2824417820006406338, guid: 0a3de75f2d7648c44af0eefdc66ce713, type: 3}
