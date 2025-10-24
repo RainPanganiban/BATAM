@@ -2355,7 +2355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactAction: {fileID: 2463369466011197420, guid: 1c222be519146d846a85fe35aef232c4, type: 3}
-  maxDistance: 3
+  maxDistance: 5
   interactLayer:
     serializedVersion: 2
     m_Bits: 128
