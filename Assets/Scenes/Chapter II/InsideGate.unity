@@ -11599,7 +11599,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 143669251883287302, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
       propertyPath: viewAngle
-      value: 120
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 143669251883287302, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
       propertyPath: viewRadius
@@ -11612,6 +11612,10 @@ PrefabInstance:
     - target: {fileID: 143669251883287302, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
       propertyPath: targetMask.m_Bits
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 143669251883287302, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
+      propertyPath: obstacleMask.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3475174817492480691, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11666,8 +11670,16 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7418996115032688757, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
+      propertyPath: loseTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418996115032688757, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
       propertyPath: chaseSpeed
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418996115032688757, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
+      propertyPath: loseSightTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7418996115032688757, guid: 9ad8bda5ab6bd5d4caf81d3037338fc2, type: 3}
       propertyPath: patrolPoints.Array.size

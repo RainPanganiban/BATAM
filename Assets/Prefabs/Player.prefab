@@ -2440,6 +2440,10 @@ MonoBehaviour:
     handObject: {fileID: 8763921592118875676}
   - itemName: Cross
     handObject: {fileID: 4621339871592826855}
+  - itemName: PriestHQ Key
+    handObject: {fileID: 3099420986025972474}
+  - itemName: Clinic Key
+    handObject: {fileID: 3099420986025972474}
   defaultHand: {fileID: 5542953629063468271}
   prayingHand: {fileID: 3579755788768039329}
   playerLight: {fileID: 7911026848588812671}

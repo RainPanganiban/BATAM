@@ -6,7 +6,7 @@ public class InteractSound : MonoBehaviour
     [Tooltip("The sound that plays when the object is interacted with.")]
     public AudioClip interactClip;
 
-    [Range(0f, 1f)]
+    [Range(0f, 100f)]
     public float volume = 1f;
 
     private AudioSource audioSource;

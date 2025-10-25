@@ -376,6 +376,8 @@ MonoBehaviour:
     - Pick up the cross.
     - Find the key.
     - Investigate the Priest's Quarter.
+    - Pick up the Clinic Key.
+    - Investigate the Clinic.
 --- !u!114 &7396709839566333394
 MonoBehaviour:
   m_ObjectHideFlags: 0

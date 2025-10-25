@@ -820,7 +820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35dc987298ec47443a7b82ef3e5294e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactClip: {fileID: 8300000, guid: 48c5e15eccbf90b49a4b1925ce7128fa, type: 3}
+  interactClip: {fileID: 8300000, guid: 87081f8722f576a46bb000e8820e2dbf, type: 3}
   volume: 1
 --- !u!82 &1964778069
 AudioSource:
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35dc987298ec47443a7b82ef3e5294e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactClip: {fileID: 8300000, guid: 48c5e15eccbf90b49a4b1925ce7128fa, type: 3}
+  interactClip: {fileID: 8300000, guid: 87081f8722f576a46bb000e8820e2dbf, type: 3}
   volume: 1
 --- !u!1 &1997152556 stripped
 GameObject:
