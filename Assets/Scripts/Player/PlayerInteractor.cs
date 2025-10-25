@@ -62,7 +62,19 @@ public class PlayerInteractor : MonoBehaviour
 
     void OnInteract(InputAction.CallbackContext ctx)
     {
-        currentTarget?.Interact();
+        if (currentTarget != null)
+        {
+            // Call the object's interaction behavior
+            currentTarget.Interact();
+            Debug.Log($"Interacted with {currentTarget}");
+
+            //Play interaction sound if the object has an InteractSound component
+            if (currentTarget is MonoBehaviour mono &&
+                mono.TryGetComponent(out InteractSound interactSound))
+            {
+                interactSound.PlayInteractSound();
+            }
+        }
     }
 
 }
