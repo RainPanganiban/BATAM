@@ -367,17 +367,12 @@ MonoBehaviour:
     tasks:
     - Use your "MOUSE" to look around.
     - Press "WASD" to move around.
-    - Interact with objects using "E", pick up the lamp at the table.
     - Press "LSHIFT" to sprint
-    - Press "F" to pray and regain sanity.
-    - Pick up the silver key.
-    - Go to the town gate.
-    - Investigate the Chapel.
-    - Pick up the cross.
-    - Find the key.
-    - Investigate the Priest's Quarter.
-    - Pick up the Clinic Key.
-    - Investigate the Clinic.
+    - Talk to Maria.
+    - Press "F" to pray and regain your sanity.
+    - Find something to light your way.
+    - Search the desk to find anything useful.
+    - Head towards the village.
 --- !u!114 &7396709839566333394
 MonoBehaviour:
   m_ObjectHideFlags: 0

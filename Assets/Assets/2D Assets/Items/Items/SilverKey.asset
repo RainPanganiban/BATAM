@@ -17,4 +17,4 @@ MonoBehaviour:
   description: Used to open doors.
   itemEffect: {fileID: 11400000, guid: 05e550f499f56034487be1dca25a03c1, type: 2}
   chapterIndex: 0
-  taskIndex: 5
+  taskIndex: 6

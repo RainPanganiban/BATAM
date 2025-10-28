@@ -17,5 +17,6 @@ MonoBehaviour:
   description: 'Provides light to the player
 
 '
+  itemEffect: {fileID: 0}
   chapterIndex: 0
-  taskIndex: 2
+  taskIndex: 5

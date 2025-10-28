@@ -28,9 +28,12 @@ public class GhostAI : MonoBehaviour
     public float loseSightTime = 2f;
     public float loseTimer = 0f;
 
+    private GhostSoundController soundController;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        soundController = GetComponent<GhostSoundController>();
         agent.updateRotation = true;
         agent.updatePosition = true;
         patrolTimer = patrolWait;
@@ -99,6 +102,12 @@ public class GhostAI : MonoBehaviour
             {
                 currentState = State.Chase;
                 visibleTimer = 0f;
+
+                if (soundController != null)
+                {
+                    soundController.PlayScream();
+                    soundController.PlayChaseMusic();
+                }
             }
         }
         else
@@ -115,6 +124,12 @@ public class GhostAI : MonoBehaviour
         if (vision.CanSeePlayer(player))
         {
             currentState = State.Chase;
+
+            if (soundController != null)
+            {
+                soundController.PlayScream();
+                soundController.PlayChaseMusic();
+            }
         }
     }
 
@@ -137,6 +152,11 @@ public class GhostAI : MonoBehaviour
             {
                 currentState = State.Patrol;
                 loseTimer = 0f;
+
+                if (soundController != null)
+                {
+                    soundController.StopChaseMusic();
+                }
             }
         }
         else

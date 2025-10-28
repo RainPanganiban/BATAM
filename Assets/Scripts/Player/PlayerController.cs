@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
                 sprintTaskDone = true;
                 if (taskManager != null)
                 {
-                    taskManager.MarkTaskCompleted(3);
+                    taskManager.MarkTaskCompleted(2);
                 }
             }
         }
