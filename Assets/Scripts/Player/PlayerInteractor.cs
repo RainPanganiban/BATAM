@@ -40,6 +40,13 @@ public class PlayerInteractor : MonoBehaviour
 
     void Update()
     {
+        if (NoteUI.Instance != null && NoteUI.Instance.IsNoteOpen)
+        {
+            promptText.gameObject.SetActive(false);
+            crosshairDot.SetActive(false);
+            return;
+        }
+
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         if (Physics.Raycast(ray, out RaycastHit hit, maxDistance, interactLayer))
         {
