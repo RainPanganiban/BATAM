@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Cross
   icon: {fileID: 21300000, guid: 023a958fc9ed5bf49a40974e34506f57, type: 3}
   description: Use to stun the ghost
+  itemEffect: {fileID: 0}
   chapterIndex: 0
-  taskIndex: 8
+  taskIndex: 9

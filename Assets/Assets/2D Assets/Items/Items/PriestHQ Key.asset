@@ -17,4 +17,4 @@ MonoBehaviour:
   description: 
   itemEffect: {fileID: 11400000, guid: 2bd401dc82ecc83478321325e106c205, type: 2}
   chapterIndex: 0
-  taskIndex: 9
+  taskIndex: 11

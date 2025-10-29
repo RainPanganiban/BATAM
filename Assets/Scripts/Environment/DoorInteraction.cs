@@ -24,6 +24,17 @@ public class DoorInteraction : MonoBehaviour, IInteractable
             return; // stop here
         }
 
+        CombinationDoor comboDoor = GetComponent<CombinationDoor>();
+        if (comboDoor != null)
+        {
+            if (comboDoor.isLocked)
+            {
+                // Show keypad UI for code entry
+                KeypadUI.Instance?.ShowKeypad(comboDoor);
+                return;
+            }
+        }
+
         Debug.Log("Next spawn point: " + spawnPointName);
         if (SpawnPointManager.Instance != null)
         {
