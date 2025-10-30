@@ -19,22 +19,20 @@ public class DoorInteraction : MonoBehaviour, IInteractable
         CombinationDoor comboDoor = GetComponent<CombinationDoor>();
         if (comboDoor != null)
         {
-            if (comboDoor.isLocked)
-            {
-                // Show keypad UI for code entry
-                KeypadUI.Instance?.ShowKeypad(comboDoor);
-                return;
-            }
+            Debug.Log("Door has a combination lock — delegating to CombinationDoor.Interact()");
+            comboDoor.Interact();
+            return;
         }
 
+        // Otherwise, handle it as a normal door
         if (doorScript != null && doorScript.isLocked)
         {
-            // Door is locked — show popup instead of entering
             PopupManager.Instance?.ShowMessage("The door is locked.");
             Debug.Log($"Door '{doorScript.doorID}' is locked.");
-            return; // stop here
+            return;
         }
 
+        // If unlocked, continue scene transition
         Debug.Log("Next spawn point: " + spawnPointName);
         if (SpawnPointManager.Instance != null)
         {

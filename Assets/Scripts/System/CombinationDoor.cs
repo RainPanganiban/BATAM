@@ -23,7 +23,8 @@ public class CombinationDoor : MonoBehaviour
     {
         if (isLocked)
         {
-            Debug.Log("Door is locked, showing keypad UI");
+            PadlockUI.Instance.ShowPadlock(this);
+            Debug.Log("Door is locked, showing padlock UI");
         }
         else
         {
