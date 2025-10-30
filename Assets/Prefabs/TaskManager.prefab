@@ -469,7 +469,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: PressNumber
         m_Mode: 5
@@ -628,7 +628,6 @@ GameObject:
   - component: {fileID: 7767636633021668651}
   - component: {fileID: 8154008115733258679}
   - component: {fileID: 8875012694591607629}
-  - component: {fileID: 971290386410258642}
   m_Layer: 5
   m_Name: Keypad
   m_TagString: Untagged
@@ -707,20 +706,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &971290386410258642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531642549412039261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67424bf810bc735459582626c37f5274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keypadPanel: {fileID: 1531642549412039261}
-  codeDisplay: {fileID: 2397681401973977762}
 --- !u!1 &1673759609669121890
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +965,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: PressNumber
         m_Mode: 5
@@ -1113,7 +1098,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: PressNumber
         m_Mode: 5
@@ -1394,7 +1379,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: PressNumber
         m_Mode: 5
@@ -1554,6 +1539,7 @@ GameObject:
   - component: {fileID: 8592684368444631284}
   - component: {fileID: 9142784689959935025}
   - component: {fileID: 3099875258229293955}
+  - component: {fileID: 7015639248373549742}
   m_Layer: 5
   m_Name: TaskHUD
   m_TagString: Untagged
@@ -1573,10 +1559,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7767636633021668651}
   - {fileID: 5706878044808658598}
   - {fileID: 3835532696103428899}
   - {fileID: 2142945782115810823}
-  - {fileID: 7767636633021668651}
   m_Father: {fileID: 8849731593366039807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1647,6 +1633,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7015639248373549742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3235092114085744596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67424bf810bc735459582626c37f5274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keypadPanel: {fileID: 1531642549412039261}
+  codeDisplay: {fileID: 2397681401973977762}
+  crosshair: {fileID: 0}
 --- !u!1 &3641661544865444818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,7 +1769,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: PressNumber
         m_Mode: 5
@@ -2175,7 +2176,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: PressNumber
         m_Mode: 5
@@ -2444,7 +2445,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: PressEnter
         m_Mode: 1
@@ -2752,7 +2753,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: PressNumber
         m_Mode: 5
@@ -2885,7 +2886,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: PressNumber
         m_Mode: 5
@@ -3154,7 +3155,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: HideKeypad
         m_Mode: 1
@@ -3563,7 +3564,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: PressNumber
         m_Mode: 5
@@ -4045,7 +4046,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971290386410258642}
+      - m_Target: {fileID: 7015639248373549742}
         m_TargetAssemblyTypeName: KeypadUI, Assembly-CSharp
         m_MethodName: PressNumber
         m_Mode: 5

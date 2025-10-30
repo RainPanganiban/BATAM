@@ -24,7 +24,6 @@ public class CombinationDoor : MonoBehaviour
         if (isLocked)
         {
             Debug.Log("Door is locked, showing keypad UI");
-            KeypadUI.Instance.ShowKeypad(this);  // This line enables your keypad
         }
         else
         {

@@ -37,6 +37,9 @@ public class ItemUseHandler : MonoBehaviour
 
     void UseSelectedItem()
     {
+        if (KeypadUI.Instance != null && KeypadUI.Instance.IsActive)
+            return;
+
         if (playerInventory == null || inventoryUI == null)
         {
             Debug.LogWarning("Missing PlayerInventory or InventoryUI reference.");

@@ -16,14 +16,6 @@ public class DoorInteraction : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (doorScript != null && doorScript.isLocked)
-        {
-            // Door is locked — show popup instead of entering
-            PopupManager.Instance?.ShowMessage("The door is locked.");
-            Debug.Log($"Door '{doorScript.doorID}' is locked.");
-            return; // stop here
-        }
-
         CombinationDoor comboDoor = GetComponent<CombinationDoor>();
         if (comboDoor != null)
         {
@@ -33,6 +25,14 @@ public class DoorInteraction : MonoBehaviour, IInteractable
                 KeypadUI.Instance?.ShowKeypad(comboDoor);
                 return;
             }
+        }
+
+        if (doorScript != null && doorScript.isLocked)
+        {
+            // Door is locked — show popup instead of entering
+            PopupManager.Instance?.ShowMessage("The door is locked.");
+            Debug.Log($"Door '{doorScript.doorID}' is locked.");
+            return; // stop here
         }
 
         Debug.Log("Next spawn point: " + spawnPointName);

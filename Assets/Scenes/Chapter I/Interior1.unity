@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 370828616}
   - component: {fileID: 370828618}
   - component: {fileID: 370828617}
+  - component: {fileID: 370828619}
   m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
@@ -618,6 +619,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactClip: {fileID: 8300000, guid: 48c5e15eccbf90b49a4b1925ce7128fa, type: 3}
   volume: 1
+--- !u!114 &370828619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370828612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f7476979463c74d9fa746a148e85ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorID: VaultDoor02
+  isLocked: 1
+  correctCode: 1234
 --- !u!1001 &416144691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -956,6 +972,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01faaae0be6992340a9eeb1b9a4d261c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1423069857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1103838871631087221, guid: 69a8ad74d31ee1441929770fd8659769, type: 3}
+  m_PrefabInstance: {fileID: 186670869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1560000598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6070021804931344312, guid: 115db34ee076ba3428c83245b5fadc93, type: 3}
@@ -2398,6 +2419,10 @@ PrefabInstance:
       propertyPath: 'chapters.Array.data[0].tasks.Array.data[14]'
       value: Unlock the passage inside the quarters.
       objectReference: {fileID: 0}
+    - target: {fileID: 7015639248373549742, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 1423069857}
     - target: {fileID: 7396709839566333394, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: defaultDuration
       value: 3
