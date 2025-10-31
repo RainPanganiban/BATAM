@@ -6,6 +6,7 @@ public class DoorInteraction : MonoBehaviour, IInteractable
     [Header("Scene")]
     public string sceneToLoad;
     public string spawnPointName;
+    private bool isTransitioning = false;
 
     private Door doorScript;
 
@@ -16,32 +17,27 @@ public class DoorInteraction : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
         CombinationDoor comboDoor = GetComponent<CombinationDoor>();
-        if (comboDoor != null)
+        if (comboDoor != null && comboDoor.isLocked)
         {
-            Debug.Log("Door has a combination lock — delegating to CombinationDoor.Interact()");
-            comboDoor.Interact();
+            PadlockUI.Instance?.ShowPadlock(comboDoor);
+            isTransitioning = false; // reset here so it can retry after unlock
             return;
         }
 
-        // Otherwise, handle it as a normal door
         if (doorScript != null && doorScript.isLocked)
         {
             PopupManager.Instance?.ShowMessage("The door is locked.");
             Debug.Log($"Door '{doorScript.doorID}' is locked.");
+            isTransitioning = false;
             return;
         }
 
-        // If unlocked, continue scene transition
         Debug.Log("Next spawn point: " + spawnPointName);
-        if (SpawnPointManager.Instance != null)
-        {
-            SpawnPointManager.Instance.SetNextSpawn(spawnPointName);
-        }
-        else
-        {
-            Debug.LogWarning("SpawnPointManager missing");
-        }
+        SpawnPointManager.Instance?.SetNextSpawn(spawnPointName);
 
         SceneManager.LoadScene(sceneToLoad);
     }

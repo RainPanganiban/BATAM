@@ -39,6 +39,9 @@ public class GameManager : MonoBehaviour
     {
         if (currentSanity == 0) currentSanity = maxSanity;
         if (currentStamina == 0) currentStamina = maxStamina;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void DecreaseSanity(float amount)

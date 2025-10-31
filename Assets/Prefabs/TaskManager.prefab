@@ -296,7 +296,6 @@ GameObject:
   - component: {fileID: 8592684368444631284}
   - component: {fileID: 9142784689959935025}
   - component: {fileID: 3099875258229293955}
-  - component: {fileID: 7015639248373549742}
   m_Layer: 5
   m_Name: TaskHUD
   m_TagString: Untagged
@@ -389,21 +388,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7015639248373549742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3235092114085744596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67424bf810bc735459582626c37f5274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keypadPanel: {fileID: 0}
-  codeDisplay: {fileID: 0}
-  crosshair: {fileID: 0}
 --- !u!1 &4850892998713963985
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.69803923}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

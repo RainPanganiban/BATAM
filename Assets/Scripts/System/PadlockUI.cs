@@ -9,18 +9,29 @@ public class PadlockUI : MonoBehaviour
     [Header("UI refs")]
     public GameObject padlockPanel;         // the parent panel (enable/disable)
     public WheelController[] wheels;        // assign 4 wheel controllers in order
-    public TMP_Text feedbackText;           // "Incorrect code" / "Unlocked"
-    public GameObject crosshair;            // optional
-    public bool hideCrosshairOnOpen = true;
+    public TMP_Text feedbackText;           // "Incorrect code" / "Unlocked
 
     private CombinationDoor currentDoor;
-    private PlayerInput playerInput;
+
+    [Header("Player Control")]
+    public PlayerController playerController;
+    public PlayerInput playerInput;
 
     private void Awake()
     {
-        Instance = this;
-        playerInput = FindObjectOfType<PlayerInput>();
-        if (padlockPanel != null) padlockPanel.SetActive(false);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // optional — only if you want it to persist
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        if (padlockPanel != null)
+            padlockPanel.SetActive(false);
     }
 
     public void ShowPadlock(CombinationDoor door)
@@ -33,30 +44,24 @@ public class PadlockUI : MonoBehaviour
         feedbackText.text = "";
         padlockPanel.SetActive(true);
 
-        if (hideCrosshairOnOpen && crosshair != null)
-            crosshair.SetActive(false);
+        if (playerInput != null)
+            playerInput.enabled = false;
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 0f;
-
-        if (playerInput != null)
-            playerInput.DeactivateInput();
     }
 
     public void HidePadlock()
     {
         padlockPanel.SetActive(false);
 
-        if (hideCrosshairOnOpen && crosshair != null)
-            crosshair.SetActive(true);
+        if (playerInput != null)
+            playerInput.enabled = true;
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
-
-        if (playerInput != null)
-            playerInput.ActivateInput();
     }
 
     // call from Unlock button
@@ -90,5 +95,6 @@ public class PadlockUI : MonoBehaviour
     public void PressExit()
     {
         HidePadlock();
+        currentDoor = null;
     }
 }

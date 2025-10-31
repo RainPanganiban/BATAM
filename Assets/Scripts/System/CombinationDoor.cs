@@ -41,11 +41,10 @@ public class CombinationDoor : MonoBehaviour
             isLocked = false;
             GameManager.Instance.completedTasks.Add("Unlocked_" + doorID);
 
-            // Optional: play animation
-            if (animator != null)
-                animator.SetTrigger("Open");
-
             PopupManager.Instance.ShowMessage("Door unlocked!");
+
+            // Automatically open the door once unlocked
+            GetComponent<DoorInteraction>()?.Interact();
         }
         else
         {
