@@ -362,6 +362,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fa3e5601d23d9af4b91256af1636e6d1, type: 3}
   m_PrefabInstance: {fileID: 596142040}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &745459471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 745459472}
+  m_Layer: 0
+  m_Name: Tunnel-PriestHQ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &745459472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745459471}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 213, y: -158.9, z: -296.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2013654635}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!4 &905800073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2483027547351529934, guid: 115db34ee076ba3428c83245b5fadc93, type: 3}
@@ -690,8 +721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67bfba3d116300c489f305d7ffe8e0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: In-PriestHQ
-  spawnPointName: In-PriestHQ
+  sceneToLoad: In-Tunnel
+  spawnPointName: PriestHQ-Tunnel
 --- !u!114 &1179672867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f7476979463c74d9fa746a148e85ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorID: VaultDoor02
+  doorID: Tunnel
   isLocked: 1
   correctCode: 1234
 --- !u!1001 &1302161921
@@ -1327,6 +1358,9 @@ PrefabInstance:
       addedObject: {fileID: 1563110395}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd02c6ddba031a94fa715a657972447e, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 745459472}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd02c6ddba031a94fa715a657972447e, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1179672864}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd02c6ddba031a94fa715a657972447e, type: 3}
@@ -1716,10 +1750,10 @@ SceneRoots:
   - {fileID: 1569657585}
   - {fileID: 1302161921}
   - {fileID: 158097293}
-  - {fileID: 2082257394}
-  - {fileID: 1811564367}
-  - {fileID: 998973662}
   - {fileID: 1686372181}
   - {fileID: 1313975169}
   - {fileID: 1334569117}
+  - {fileID: 2082257394}
+  - {fileID: 1811564367}
+  - {fileID: 998973662}
   - {fileID: 1108645873}

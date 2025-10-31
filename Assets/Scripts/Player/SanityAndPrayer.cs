@@ -113,6 +113,7 @@ public class SanityAndPrayer : MonoBehaviour
     void Die()
     {
         Debug.Log("Player lost all sanity and died.");
-        // Trigger death screen / respawn here
+        if (GameUIController.Instance != null)
+            GameUIController.Instance.ShowGameOver();
     }
 }

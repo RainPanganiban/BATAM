@@ -24,7 +24,7 @@ public class DoorInteraction : MonoBehaviour, IInteractable
         if (comboDoor != null && comboDoor.isLocked)
         {
             PadlockUI.Instance?.ShowPadlock(comboDoor);
-            isTransitioning = false; // reset here so it can retry after unlock
+            isTransitioning = false; // 0reset here so it can retry after unlock
             return;
         }
 
