@@ -13,10 +13,6 @@ public class PadlockUI : MonoBehaviour
 
     private CombinationDoor currentDoor;
 
-    [Header("Player Control")]
-    public PlayerController playerController;
-    public PlayerInput playerInput;
-
     private void Awake()
     {
         if (Instance == null)
@@ -44,8 +40,9 @@ public class PadlockUI : MonoBehaviour
         feedbackText.text = "";
         padlockPanel.SetActive(true);
 
-        if (playerInput != null)
-            playerInput.enabled = false;
+        var player = FindAnyObjectByType<PlayerController>();
+        if (player != null)
+            player.enabled = false;
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -56,8 +53,9 @@ public class PadlockUI : MonoBehaviour
     {
         padlockPanel.SetActive(false);
 
-        if (playerInput != null)
-            playerInput.enabled = true;
+        var player = FindAnyObjectByType<PlayerController>();
+        if (player != null)
+            player.enabled = true;
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

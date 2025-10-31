@@ -864,6 +864,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3573584540619651216, guid: 36fa77d7d92a43e479bad1527bf3ae91, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8780508316804833151, guid: 36fa77d7d92a43e479bad1527bf3ae91, type: 3}
       propertyPath: m_Name
       value: PadlockManager

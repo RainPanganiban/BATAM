@@ -27,6 +27,10 @@ public class NoteUI : MonoBehaviour
         notePanel.SetActive(true);
         Time.timeScale = 0f;
 
+        var player = FindAnyObjectByType<PlayerController>();
+        if (player != null)
+            player.enabled = false;
+
         if (noteTextField)
         {
             noteTextField.gameObject.SetActive(!string.IsNullOrEmpty(text));
@@ -44,5 +48,9 @@ public class NoteUI : MonoBehaviour
     {
         notePanel.SetActive(false);
         Time.timeScale = 1f;
+
+        var player = FindAnyObjectByType<PlayerController>();
+        if (player != null)
+            player.enabled = true;
     }
 }
