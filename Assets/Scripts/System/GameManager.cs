@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     //Persistent task
     public int currentChapterIndex = 0;
     public int currentTaskIndex = 0;
-
     public HashSet<string> completedTasks = new HashSet<string>();
 
     void Awake()
@@ -62,5 +61,20 @@ public class GameManager : MonoBehaviour
     public void IncreaseStamina(float amount)
     {
         currentStamina = Mathf.Min(maxStamina, currentStamina + amount);
+    }
+
+    public void ResetProgress()
+    {
+        currentChapterIndex = 0;
+        currentTaskIndex = 0;
+        completedTasks.Clear();
+
+        currentSanity = maxSanity;
+        currentStamina = maxStamina;
+
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            inventorySlots[i] = null;
+        }
     }
 }

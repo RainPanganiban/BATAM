@@ -133,6 +133,10 @@ public class GameUIController : MonoBehaviour
     public void OnMainMenuButton()
     {
         Time.timeScale = 1f;
+
+        if (GameManager.Instance != null)
+            GameManager.Instance.ResetProgress();
+
         SceneManager.LoadScene("MainMenu");
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TaskManager : MonoBehaviour
 {
@@ -20,38 +21,123 @@ public class TaskManager : MonoBehaviour
     private int currentChapterIndex = 0;
     private int currentTaskIndex = 0;
     private HashSet<string> completedTasks = new HashSet<string>();
-
+    private bool initialized = false;
 
     private void Awake()
     {
-        // Singleton setup — ensures only one TaskManager exists
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Keep across scenes
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject); // Prevent duplicates
+            Destroy(gameObject);
+            return;
         }
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     void Start()
     {
-        if (GameManager.Instance != null)
+        InitializeTasks();
+    }
+
+    private void InitializeTasks()
+    {
+        if (initialized) return;
+
+        LoadProgressFromGameManager();
+        TryFindTaskText();
+        SkipCompletedTasks();
+        DisplayCurrentTask();
+
+        initialized = true;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        TryFindTaskText();
+
+        if (scene.name == "MainMenu")
         {
-            currentChapterIndex = GameManager.Instance.currentChapterIndex;
-            currentTaskIndex = GameManager.Instance.currentTaskIndex;
-            completedTasks = GameManager.Instance.completedTasks;
+            if (taskText != null)
+                taskText.gameObject.SetActive(false);
+            return;
         }
 
-        // ensure we show an unfinished task
-        SkipCompletedTasks();
+        // Re-enable UI when entering gameplay scene
+        if (taskText != null)
+            taskText.gameObject.SetActive(true);
+
+        // Check if we just came from Main Menu (fresh start)
+        if (GameManager.Instance != null &&
+            GameManager.Instance.currentTaskIndex == 0 &&
+            GameManager.Instance.completedTasks.Count == 0)
+        {
+            ResetTasks();
+        }
+
+        DisplayCurrentTask();
+    }
+
+    // Automatically find the Task Text UI by name if missing
+    private void TryFindTaskText()
+    {
+        if (taskText == null)
+        {
+            GameObject found = GameObject.Find("TaskText");
+            if (found != null)
+            {
+                taskText = found.GetComponent<TextMeshProUGUI>();
+                Debug.Log("TaskManager: Linked to TaskText UI successfully.");
+            }
+            else
+            {
+                Debug.LogWarning("TaskManager: Could not find TaskText in scene.");
+            }
+        }
+    }
+
+    private void LoadProgressFromGameManager()
+    {
+        if (GameManager.Instance == null) return;
+
+        currentChapterIndex = GameManager.Instance.currentChapterIndex;
+        currentTaskIndex = GameManager.Instance.currentTaskIndex;
+        completedTasks = GameManager.Instance.completedTasks ?? new HashSet<string>();
+    }
+
+    private void SaveProgressToGameManager()
+    {
+        if (GameManager.Instance == null) return;
+
+        GameManager.Instance.currentChapterIndex = currentChapterIndex;
+        GameManager.Instance.currentTaskIndex = currentTaskIndex;
+        GameManager.Instance.completedTasks = completedTasks;
+    }
+
+    public void ResetTasks()
+    {
+        currentChapterIndex = 0;
+        currentTaskIndex = 0;
+        completedTasks.Clear();
+        SaveProgressToGameManager();
         DisplayCurrentTask();
     }
 
     void DisplayCurrentTask()
     {
+        TryFindTaskText(); // ensure the text is linked
+
+        if (taskText == null) return;
+
         if (currentChapterIndex < chapters.Count &&
             currentTaskIndex < chapters[currentChapterIndex].tasks.Count)
         {
@@ -67,29 +153,15 @@ public class TaskManager : MonoBehaviour
     {
         string key = $"{currentChapterIndex}-{taskIndex}";
 
-        // If already marked complete, skip
         if (completedTasks.Contains(key))
             return;
 
         completedTasks.Add(key);
+        SaveProgressToGameManager();
 
-        if (GameManager.Instance != null)
-            GameManager.Instance.completedTasks = completedTasks;
-
-        // Check if this was the current task
         if (taskIndex == currentTaskIndex)
         {
-            AdvanceToNextTask();  // normal progression
-        }
-        else if (taskIndex > currentTaskIndex)
-        {
-            // Future task done early — no UI update yet
-            return;
-        }
-        else
-        {
-            // Task done in the past (no effect)
-            return;
+            AdvanceToNextTask();
         }
     }
 
@@ -97,7 +169,6 @@ public class TaskManager : MonoBehaviour
     {
         currentTaskIndex++;
 
-        // Move to next chapter if needed
         if (currentChapterIndex < chapters.Count &&
             currentTaskIndex >= chapters[currentChapterIndex].tasks.Count)
         {
@@ -105,16 +176,8 @@ public class TaskManager : MonoBehaviour
             currentTaskIndex = 0;
         }
 
-        // Here's the key fix: skip all already completed tasks
         SkipCompletedTasks();
-
-        // Save progress
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.currentChapterIndex = currentChapterIndex;
-            GameManager.Instance.currentTaskIndex = currentTaskIndex;
-        }
-
+        SaveProgressToGameManager();
         DisplayCurrentTask();
     }
 
@@ -122,12 +185,10 @@ public class TaskManager : MonoBehaviour
     {
         string key = $"{currentChapterIndex}-{currentTaskIndex}";
 
-        // Keep advancing until we find a task that isn't done
         while (completedTasks.Contains(key))
         {
             currentTaskIndex++;
 
-            // If end of chapter, move to next
             if (currentChapterIndex < chapters.Count &&
                 currentTaskIndex >= chapters[currentChapterIndex].tasks.Count)
             {
