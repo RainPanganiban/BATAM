@@ -98,8 +98,6 @@ public class SanityAndPrayer : MonoBehaviour
     {
         isPraying = true;
         if (playerMovement) playerMovement.enabled = false;
-
-        Debug.Log("Praying started");
     }
 
     void StopPrayer()

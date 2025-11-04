@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameUIController : MonoBehaviour
 {
@@ -19,33 +20,46 @@ public class GameUIController : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-
+        // Disable UI at start
         if (pauseMenu != null) pauseMenu.SetActive(false);
         if (gameOverScreen != null) gameOverScreen.SetActive(false);
-    }
 
-    private void Start()
-    {
+        // Make sure the game isn't frozen
         Time.timeScale = 1f;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         isPaused = false;
         isGameOver = false;
 
-        if (pauseMenu != null) pauseMenu.SetActive(false);
-        if (gameOverScreen != null) gameOverScreen.SetActive(false);
+        // Cursor state
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
+    private IEnumerator Start()
+    {
+        // Wait a frame so all other scripts (PlayerController, etc.) finish initializing
+        yield return null;
+
+        // Ensure player references exist
+        if (playerController == null)
+            playerController = FindObjectOfType<PlayerController>();
+        if (playerInput == null)
+            playerInput = FindObjectOfType<PlayerInput>();
+
+        // Force-enable movement
         if (playerController != null)
+        {
             playerController.enabled = true;
+            Debug.Log("PlayerController enabled at start");
+        }
+
+        // Confirm time is normal
+        Time.timeScale = 1f;
     }
 
     private void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame && !isGameOver)
+        // Only allow pausing if not in game over
+        if (!isGameOver && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             TogglePause();
         }
@@ -57,19 +71,31 @@ public class GameUIController : MonoBehaviour
 
         if (isPaused)
         {
+            // Pause game
             Time.timeScale = 0f;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             if (pauseMenu != null) pauseMenu.SetActive(true);
-            if (playerController != null) playerController.enabled = false;
+
+            // Disable player input/movement
+            if (playerController != null)
+                playerController.enabled = false;
+            if (playerInput != null)
+                playerInput.enabled = false;
         }
         else
         {
+            // Resume game
             Time.timeScale = 1f;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             if (pauseMenu != null) pauseMenu.SetActive(false);
-            if (playerController != null) playerController.enabled = true;
+
+            // Re-enable player input/movement
+            if (playerController != null)
+                playerController.enabled = true;
+            if (playerInput != null)
+                playerInput.enabled = true;
         }
     }
 
@@ -85,14 +111,17 @@ public class GameUIController : MonoBehaviour
         if (gameOverScreen != null)
             gameOverScreen.SetActive(true);
 
+        // Disable player completely
         if (playerController != null)
             playerController.enabled = false;
+        if (playerInput != null)
+            playerInput.enabled = false;
     }
 
     // Button functions
     public void OnResumeButton()
     {
-        TogglePause();
+        if (isPaused) TogglePause();
     }
 
     public void OnRestartButton()
