@@ -535,6 +535,10 @@ MonoBehaviour:
     - Unlock the passage inside the quarters.
     - Investigate what lies beyond the passage.
     - Explore the clinic reception area.
+    - Search the hallway for supplies.
+    - Search the hallway for supplies.
+    - Inspect the patient rooms.
+    - Leave the clinic.
 --- !u!114 &7396709839566333394
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ab030b2d982a324e8f51380574f6e6e, type: 3}
-  m_Name: Pills
+  m_Name: Pills 1
   m_EditorClassIdentifier: 
   itemName: Pills
   icon: {fileID: 21300000, guid: 5800702457b435f47a3e6f91e93592df, type: 3}
   description: Replenish sanity
   itemEffect: {fileID: 11400000, guid: 14ea4f2aae518444d9ba9ce712e1e11e, type: 2}
   chapterIndex: 0
-  taskIndex: 19
-  triggerTaskOnly: 0
+  taskIndex: 18
+  triggerTaskOnly: 1

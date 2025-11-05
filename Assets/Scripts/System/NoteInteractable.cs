@@ -1,10 +1,15 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class NoteInteractable : MonoBehaviour, IInteractable
 {
     [Header("Note Content")]
     [TextArea] public string noteText;
     public Sprite noteImage;
+
+    [Header("Sound Effects")]
+    public AudioClip openClip;
+    public AudioClip closeClip;
 
     [Header("Task Trigger (optional)")]
     public bool triggersTask = false;
@@ -16,17 +21,16 @@ public class NoteInteractable : MonoBehaviour, IInteractable
     {
         if (isOpen)
         {
-            // Close the note
             NoteUI.Instance.CloseNote();
             isOpen = false;
+            SoundManager.Instance.PlayNoteClose();
         }
         else
         {
-            // Open the note
             NoteUI.Instance.OpenNote(noteText, noteImage);
             isOpen = true;
+            SoundManager.Instance.PlayNoteOpen();
 
-            // Trigger task if needed
             if (triggersTask && taskIndexToTrigger >= 0)
                 TaskManager.Instance.MarkTaskCompleted(taskIndexToTrigger);
         }

@@ -1424,6 +1424,7 @@ GameObject:
   - component: {fileID: 1963753138}
   - component: {fileID: 1963753141}
   - component: {fileID: 1963753140}
+  - component: {fileID: 1963753142}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -1451,6 +1452,9 @@ MonoBehaviour:
   woodSprintClip: {fileID: 8300000, guid: 2f16444a9cb1aab47b6afed58f1af842, type: 3}
   dirtWalkClip: {fileID: 8300000, guid: 81038960ca729914b85dbfec68390ba9, type: 3}
   dirtSprintClip: {fileID: 8300000, guid: f2090e1d304162b409ebb10347ade432, type: 3}
+  uiSource: {fileID: 1963753142}
+  noteOpenClip: {fileID: 8300000, guid: 8dc77b8e226b0544e8eba5731995b0ff, type: 3}
+  noteCloseClip: {fileID: 8300000, guid: 8dc77b8e226b0544e8eba5731995b0ff, type: 3}
 --- !u!4 &1963753139
 Transform:
   m_ObjectHideFlags: 0
@@ -1660,254 +1664,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1001 &2104840539
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1708742579}
-    m_Modifications:
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.005893458
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.025824206
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.005893458
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.176
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.542
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -12.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3082050326313095088, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
-      propertyPath: m_Name
-      value: candle (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
---- !u!1 &2110532058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2110532064}
-  - component: {fileID: 2110532063}
-  - component: {fileID: 2110532062}
-  - component: {fileID: 2110532061}
-  - component: {fileID: 2110532060}
-  - component: {fileID: 2110532059}
-  - component: {fileID: 2110532065}
-  - component: {fileID: 2110532066}
-  m_Layer: 7
-  m_Name: Pills
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2110532059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110532058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca6e0262714ca8f46a2d5672738ee045, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 8582693ba3638864eab2786f60f4be75, type: 2}
-  taskManager: {fileID: 1277954539}
---- !u!65 &2110532060
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110532058}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.94, y: 1.15, z: 0.16}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!64 &2110532061
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110532058}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2110532062
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110532058}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 26bdfb79b51b3cc41bef2497109f10c2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2110532063
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110532058}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2110532064
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110532058}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.94843, y: 3.099, z: -12.338}
-  m_LocalScale: {x: 0.5, y: 0.3, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1708742579}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2110532065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110532058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35dc987298ec47443a7b82ef3e5294e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactClip: {fileID: 8300000, guid: c50ec5fbf71c4cf45af906b8dd109b4d, type: 3}
-  volume: 1
---- !u!82 &2110532066
+--- !u!82 &1963753142
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110532058}
+  m_GameObject: {fileID: 1963753136}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1992,6 +1761,84 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &2104840539
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1708742579}
+    m_Modifications:
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.005893458
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.025824206
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.005893458
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.176
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417998545257010442, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082050326313095088, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+      propertyPath: m_Name
+      value: candle (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+--- !u!4 &2110532064 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4411119877436917359, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+  m_PrefabInstance: {fileID: 3017681359988744142}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2139045595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2179,6 +2026,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e06f4182b61f453438e1071395e45d4e, type: 3}
+--- !u!1001 &3017681359988744142
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1708742579}
+    m_Modifications:
+    - target: {fileID: 1296015452733938398, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b7af2bc0908aa4346b37f734015898cc, type: 2}
+    - target: {fileID: 1582334413607754501, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 82fa5f784b9ff1a4b9b74c39e03b235a, type: 2}
+    - target: {fileID: 1582334413607754501, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: taskManager
+      value: 
+      objectReference: {fileID: 1277954539}
+    - target: {fileID: 4411119877436917359, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.94843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411119877436917359, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.099
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411119877436917359, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.338
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411119877436917359, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411119877436917359, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411119877436917359, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411119877436917359, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411119877436917359, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411119877436917359, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411119877436917359, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936481416441525290, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
+      propertyPath: m_Name
+      value: Pills
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ccbbe46dc2c30214bbfc6ec3d93fcb54, type: 3}
 --- !u!1001 &5303257665684070589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2344,15 +2260,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: chapters.Array.data[1].chapterName
-      value: Chapter II
+      value: Chapter I
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: chapters.Array.data[0].tasks.Array.size
-      value: 18
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: chapters.Array.data[1].tasks.Array.size
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[0].tasks.Array.data[2]'
@@ -2388,7 +2304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[1].tasks.Array.data[0]'
-      value: Investigate the Chapel.
+      value: Use your "MOUSE" to look around.
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[1].tasks.Array.data[1]'
@@ -2396,23 +2312,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[1].tasks.Array.data[2]'
-      value: Interact with objects using "E", pick up the lamp at the table.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
-      propertyPath: 'chapters.Array.data[1].tasks.Array.data[3]'
       value: Press "LSHIFT" to sprint
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[3]'
+      value: Read the note besides Maria.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[1].tasks.Array.data[4]'
-      value: Press "F" to pray and regain sanity.
+      value: Press "F" to pray and regain your sanity.
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[1].tasks.Array.data[5]'
-      value: Pick up the silver key.
+      value: Find something to light your way.
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[1].tasks.Array.data[6]'
-      value: Go to the town gate.
+      value: Search the house to find anything useful.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[7]'
+      value: Head towards the village.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[8]'
+      value: Investigate the chapel.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[9]'
+      value: Examine the chapel for signs of the priest.
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[0].tasks.Array.data[10]'
@@ -2441,6 +2369,62 @@ PrefabInstance:
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[0].tasks.Array.data[17]'
       value: Explore the clinic reception area.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[0].tasks.Array.data[18]'
+      value: Search the hallway for supplies.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[0].tasks.Array.data[19]'
+      value: Search the hallway for supplies.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[0].tasks.Array.data[20]'
+      value: Inspect the patient rooms.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[0].tasks.Array.data[21]'
+      value: Leave the clinic.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[10]'
+      value: Gather clues left behind.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[11]'
+      value: Gather clues left behind.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[12]'
+      value: "Enter the priest\u2019s quarters."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[13]'
+      value: "Search the priest\u2019s room for anything unusual."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[14]'
+      value: "Search the priest\u2019s room for anything unusual."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[15]'
+      value: Unlock the passage inside the quarters.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[16]'
+      value: Investigate what lies beyond the passage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[17]'
+      value: Explore the clinic reception area.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[18]'
+      value: Search the hallway for supplies.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[1].tasks.Array.data[19]'
+      value: Inspect the patient rooms.
       objectReference: {fileID: 0}
     - target: {fileID: 7015639248373549742, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: crosshair

@@ -17,6 +17,11 @@ public class SoundManager : MonoBehaviour
     public AudioClip dirtWalkClip;
     public AudioClip dirtSprintClip;
 
+    [Header("UI & Interaction Sounds")]
+    public AudioSource uiSource;
+    public AudioClip noteOpenClip;
+    public AudioClip noteCloseClip;
+
     private AudioClip currentWalkClip;
     private AudioClip currentSprintClip;
 
@@ -103,5 +108,17 @@ public class SoundManager : MonoBehaviour
     private void StopFootstep()
     {
         footstepSource.Stop();
+    }
+
+    public void PlayNoteOpen()
+    {
+        if (uiSource != null && noteOpenClip != null)
+            uiSource.PlayOneShot(noteOpenClip);
+    }
+
+    public void PlayNoteClose()
+    {
+        if (uiSource != null && noteCloseClip != null)
+            uiSource.PlayOneShot(noteCloseClip);
     }
 }
