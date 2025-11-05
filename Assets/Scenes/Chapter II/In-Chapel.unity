@@ -829,6 +829,15 @@ PrefabInstance:
       value: Note
       objectReference: {fileID: 0}
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
+      propertyPath: noteText
+      value: "I came back to the chapel that night, though you told me never to.
+        The candles were still burning \u2014 faint, but alive.\n\nI prayed where
+        I last saw her. I whispered the verses you gave me: Psalm I, Psalm IV, Psalm
+        VI, and Psalm IX.\n\nI hoped one of them would drown out her voice.\n\nIf
+        you find this, please\u2026 forgive what I\u2019ve done.\nI only wanted to
+        make it quiet again."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: triggersTask
       value: 1
       objectReference: {fileID: 0}

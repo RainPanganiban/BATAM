@@ -5516,7 +5516,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: de3b9d15a015e4f4d91ac66746411cd6, type: 2}
     - target: {fileID: 8249440911572530524, guid: 3a5173bed3fb3574cb0c3193927db241, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.49
+      value: -5.35
       objectReference: {fileID: 0}
     - target: {fileID: 8249440911572530524, guid: 3a5173bed3fb3574cb0c3193927db241, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5524,7 +5524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8249440911572530524, guid: 3a5173bed3fb3574cb0c3193927db241, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.86
+      value: 4.87
       objectReference: {fileID: 0}
     - target: {fileID: 8249440911572530524, guid: 3a5173bed3fb3574cb0c3193927db241, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9878,7 +9878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 661412336355064887, guid: 60ec64ff97c8d43429ec39f634c1ad30, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.51
+      value: -26.05
       objectReference: {fileID: 0}
     - target: {fileID: 661412336355064887, guid: 60ec64ff97c8d43429ec39f634c1ad30, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9886,7 +9886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 661412336355064887, guid: 60ec64ff97c8d43429ec39f634c1ad30, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.79
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 661412336355064887, guid: 60ec64ff97c8d43429ec39f634c1ad30, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9918,15 +9918,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1787540753616749475, guid: 60ec64ff97c8d43429ec39f634c1ad30, type: 3}
       propertyPath: m_Size.x
-      value: 118.61
+      value: 123.98
       objectReference: {fileID: 0}
     - target: {fileID: 1787540753616749475, guid: 60ec64ff97c8d43429ec39f634c1ad30, type: 3}
       propertyPath: m_Size.y
       value: 12.95
       objectReference: {fileID: 0}
+    - target: {fileID: 1787540753616749475, guid: 60ec64ff97c8d43429ec39f634c1ad30, type: 3}
+      propertyPath: m_Size.z
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4948711258698729670, guid: 60ec64ff97c8d43429ec39f634c1ad30, type: 3}
       propertyPath: m_Volume
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6912680648045570338, guid: 60ec64ff97c8d43429ec39f634c1ad30, type: 3}
       propertyPath: scareAnimator

@@ -737,7 +737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorID: Tunnel
   isLocked: 1
-  correctCode: 1234
+  correctCode: 1469
 --- !u!1001 &1302161921
 PrefabInstance:
   m_ObjectHideFlags: 0

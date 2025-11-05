@@ -376,6 +376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LocationTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 3631524316445496726, guid: 8889d42684846c64890ad44cd2edfab9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4356171184245790834, guid: 8889d42684846c64890ad44cd2edfab9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.07
@@ -1083,7 +1087,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 55d8dd2c426e232479477aab52ec6089, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1122,8 +1126,8 @@ Transform:
   m_GameObject: {fileID: 1588619520}
   serializedVersion: 2
   m_LocalRotation: {x: 0.002961897, y: 0.70710063, z: -0.002961897, w: 0.70710063}
-  m_LocalPosition: {x: 9.54, y: 2.91, z: -5.95}
-  m_LocalScale: {x: 8.67, y: 1, z: 1}
+  m_LocalPosition: {x: 9.54, y: 3.07, z: -5.95}
+  m_LocalScale: {x: 8.67, y: 1.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2285,6 +2289,14 @@ PrefabInstance:
         it should turn \u2014 as you always do when locking our home at night.\n\nBe
         careful out there. The night feels heavier than usual.\n\n\u2014 Maria"
       objectReference: {fileID: 0}
+    - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
+      propertyPath: triggersTask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
+      propertyPath: taskIndexToTrigger
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2340,7 +2352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[0].tasks.Array.data[3]'
-      value: Talk to Maria.
+      value: Read the note besides Maria.
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[0].tasks.Array.data[4]'
@@ -2352,7 +2364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[0].tasks.Array.data[6]'
-      value: Search the desk to find anything useful.
+      value: Search the house to find anything useful.
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[0].tasks.Array.data[7]'
