@@ -14,14 +14,28 @@ public class ItemInteraction : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (itemData == null) return;
 
         PlayerInventory inventory = Object.FindFirstObjectByType<PlayerInventory>();
 
-        if (inventory != null && itemData != null)
+        if (itemData.triggerTaskOnly)
+        {
+            Debug.Log($"Triggered task-only item: {itemData.itemName}");
+
+            if (taskManager != null && itemData.taskIndex >= 0)
+            {
+                taskManager.MarkTaskCompleted(itemData.taskIndex);
+            }
+
+            Destroy(gameObject);
+            return;
+        }
+
+        if (inventory != null)
         {
             if (inventory.PickupItem(itemData))
             {
-                Debug.Log("picked up: " + itemData.itemName);
+                Debug.Log("Picked up: " + itemData.itemName);
 
                 if (taskManager != null && itemData.taskIndex >= 0)
                 {

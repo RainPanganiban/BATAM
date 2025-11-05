@@ -14,4 +14,8 @@ public class ItemData : ScriptableObject
 
     [Tooltip("Task index to complete when this item is picked up. Set to -1 if it does not trigger any task.")]
     public int taskIndex = -1;
+
+    [Header("Special Behavior")]
+    [Tooltip("If true, this item only triggers a task and will not be added to inventory.")]
+    public bool triggerTaskOnly = false;
 }

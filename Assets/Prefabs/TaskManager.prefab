@@ -531,8 +531,10 @@ MonoBehaviour:
     - Gather clues left behind.
     - "Enter the priest\u2019s quarters."
     - "Search the priest\u2019s room for anything unusual."
+    - "Search the priest\u2019s room for anything unusual."
     - Unlock the passage inside the quarters.
-    - Enter the secret passage.
+    - Investigate what lies beyond the passage.
+    - Explore the clinic reception area.
 --- !u!114 &7396709839566333394
 MonoBehaviour:
   m_ObjectHideFlags: 0

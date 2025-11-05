@@ -2283,7 +2283,7 @@ PrefabInstance:
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: noteText
       value: "My love,\n\nIf you\u2019re reading this, you must be heading to the
-        chapel.\nIt will be locked at this hour, so you\u2019ll need the key \u2014
+        chapel. It will be locked at this hour, so you\u2019ll need the key \u2014
         I believe you left it somewhere here in the house.\n\nWhen you reach the
         chapel, try using it on the door.\nJust click the door with your hand and
         it should turn \u2014 as you always do when locking our home at night.\n\nBe
@@ -2340,7 +2340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: chapters.Array.data[0].tasks.Array.size
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: chapters.Array.data[1].tasks.Array.size
@@ -2424,7 +2424,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: 'chapters.Array.data[0].tasks.Array.data[14]'
-      value: Unlock the passage inside the quarters.
+      value: "Search the priest\u2019s room for anything unusual."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[0].tasks.Array.data[16]'
+      value: Investigate what lies beyond the passage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525102125653203453, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
+      propertyPath: 'chapters.Array.data[0].tasks.Array.data[17]'
+      value: Explore the clinic reception area.
       objectReference: {fileID: 0}
     - target: {fileID: 7015639248373549742, guid: 0adbdeab8f07b6a478157292a2076d94, type: 3}
       propertyPath: crosshair
