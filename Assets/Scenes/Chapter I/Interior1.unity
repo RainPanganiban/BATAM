@@ -2057,6 +2057,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1527523191114111786, guid: a1df1da0366ad9348a690bd30c65e9d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fdf4a6b8e1bf54d479dca1e9bb6ed6a9, type: 3}
     - target: {fileID: 1959738548748285817, guid: a1df1da0366ad9348a690bd30c65e9d2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2108,6 +2112,10 @@ PrefabInstance:
     - target: {fileID: 6345443585421123290, guid: a1df1da0366ad9348a690bd30c65e9d2, type: 3}
       propertyPath: m_Name
       value: GameUIController
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345443585421123290, guid: a1df1da0366ad9348a690bd30c65e9d2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -15,6 +15,9 @@ public class GameUIController : MonoBehaviour
     public PlayerInput playerInput;
     public PlayerController playerController;
 
+    public AudioClip buttonClick;
+    [Range(0f, 1f)] public float sfxVolume = 1f;
+
     private bool isPaused = false;
     private bool isGameOver = false;
 
@@ -178,5 +181,13 @@ public class GameUIController : MonoBehaviour
         }
 
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void PlayButtonClick()
+    {
+        if (buttonClick != null)
+        {
+            AudioSource.PlayClipAtPoint(buttonClick, Camera.main.transform.position, sfxVolume);
+        }
     }
 }
