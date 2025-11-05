@@ -2053,6 +2053,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1959738548748285817, guid: a1df1da0366ad9348a690bd30c65e9d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901350674580777477, guid: a1df1da0366ad9348a690bd30c65e9d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4207374844691538839, guid: a1df1da0366ad9348a690bd30c65e9d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.74401
@@ -2267,6 +2275,15 @@ PrefabInstance:
     - target: {fileID: 5584607345144154889, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: m_Name
       value: Note
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
+      propertyPath: noteText
+      value: "My love,\n\nIf you\u2019re reading this, you must be heading to the
+        chapel.\nIt will be locked at this hour, so you\u2019ll need the key \u2014
+        I believe you left it somewhere here in the house.\n\nWhen you reach the
+        chapel, try using it on the door.\nJust click the door with your hand and
+        it should turn \u2014 as you always do when locking our home at night.\n\nBe
+        careful out there. The night feels heavier than usual.\n\n\u2014 Maria"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

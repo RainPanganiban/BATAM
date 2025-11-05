@@ -15,6 +15,12 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
+        // Clean up any leftover managers from previous sessions
+        if (GameManager.Instance != null)
+            Destroy(GameManager.Instance.gameObject);
+        if (TaskManager.Instance != null)
+            Destroy(TaskManager.Instance.gameObject);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

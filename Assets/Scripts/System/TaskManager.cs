@@ -25,15 +25,26 @@ public class TaskManager : MonoBehaviour
 
     private void Awake()
     {
+        // Allow a new TaskManager to spawn fresh from main menu
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
+        else if (instance != this)
         {
-            Destroy(gameObject);
-            return;
+            // If we're currently in MainMenu, replace the old instance
+            if (SceneManager.GetActiveScene().name == "MainMenu")
+            {
+                Destroy(instance.gameObject);
+                instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
         }
 
         SceneManager.sceneLoaded += OnSceneLoaded;

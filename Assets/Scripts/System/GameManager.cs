@@ -76,5 +76,7 @@ public class GameManager : MonoBehaviour
         {
             inventorySlots[i] = null;
         }
+
+        Debug.Log("GameManager progress reset successfully.");
     }
 }

@@ -111,7 +111,12 @@ public class SanityAndPrayer : MonoBehaviour
     void Die()
     {
         Debug.Log("Player lost all sanity and died.");
-        if (GameUIController.Instance != null)
-            GameUIController.Instance.ShowGameOver();
+
+        var ui = FindFirstObjectByType<GameUIController>();
+
+        if (ui != null)
+            ui.ShowGameOver();
+        else
+            Debug.LogWarning("GameUIController not found — cannot show Game Over screen.");
     }
 }

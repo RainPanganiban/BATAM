@@ -126,8 +126,30 @@ public class GameUIController : MonoBehaviour
 
     public void OnRestartButton()
     {
+        // Reset game time
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        // Fully reset state
+        isPaused = false;
+        isGameOver = false;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        // Reactivate player input/movement when scene reloads
+        if (playerController != null)
+            playerController.enabled = true;
+        if (playerInput != null)
+            playerInput.enabled = true;
+
+        // Hide UI panels
+        if (pauseMenu != null)
+            pauseMenu.SetActive(false);
+        if (gameOverScreen != null)
+            gameOverScreen.SetActive(false);
+
+        // Reload the current level from scratch
+        SceneManager.LoadScene("Interior1");
     }
 
     public void OnMainMenuButton()
@@ -135,7 +157,25 @@ public class GameUIController : MonoBehaviour
         Time.timeScale = 1f;
 
         if (GameManager.Instance != null)
+        {
             GameManager.Instance.ResetProgress();
+        }
+
+        if (TaskManager.Instance != null)
+        {
+            Destroy(TaskManager.Instance.gameObject);
+        }
+
+        if (GameManager.Instance != null)
+        {
+            Destroy(GameManager.Instance.gameObject);
+        }
+
+        var player = FindObjectOfType<PlayerController>();
+        if (player != null)
+        {
+            Destroy(player.gameObject);
+        }
 
         SceneManager.LoadScene("MainMenu");
     }
