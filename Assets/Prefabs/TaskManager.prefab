@@ -538,7 +538,11 @@ MonoBehaviour:
     - Search the hallway for supplies.
     - Search the hallway for supplies.
     - Inspect the patient rooms.
-    - Leave the clinic.
+    - Something here must open another door.
+    - The key must fit somewhere nearby.
+    - "There\u2019s something hidden here, it has to lead somewhere."
+    - Enter the secret passage.
+    - Whatever he wrote, it might be the key.
 --- !u!114 &7396709839566333394
 MonoBehaviour:
   m_ObjectHideFlags: 0

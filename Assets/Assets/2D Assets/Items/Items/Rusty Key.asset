@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab030b2d982a324e8f51380574f6e6e, type: 3}
+  m_Name: Rusty Key
+  m_EditorClassIdentifier: 
+  itemName: Rusty Key
+  icon: {fileID: 21300000, guid: c6e7b2d01b53b054f9e2139d3d21b926, type: 3}
+  description: Used to open doors.
+  itemEffect: {fileID: 11400000, guid: 9ea1e7e08d60ceb4696b9acb9aa1c0d5, type: 2}
+  chapterIndex: 0
+  taskIndex: 23
+  triggerTaskOnly: 0
