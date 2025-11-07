@@ -977,8 +977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67bfba3d116300c489f305d7ffe8e0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: In-Clinic
-  spawnPointName: Tunnel-Clinic
+  sceneToLoad: In-Bunker
+  spawnPointName: In-Bunker
 --- !u!65 &2113137244
 BoxCollider:
   m_ObjectHideFlags: 0
