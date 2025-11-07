@@ -2206,12 +2206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: noteText
-      value: "My love,\n\nIf you\u2019re reading this, you must be heading to the
-        chapel. It will be locked at this hour, so you\u2019ll need the key \u2014
-        I believe you left it somewhere here in the house.\n\nWhen you reach the
-        chapel, try using it on the door.\nJust click the door with your hand and
-        it should turn \u2014 as you always do when locking our home at night.\n\nBe
-        careful out there. The night feels heavier than usual.\n\n\u2014 Maria"
+      value: "My love,\n\nIf you\u2019re reading this, you must already be on your
+        way to the chapel. You left the key somewhere here \u2014 I\u2019m sure you\u2019ll
+        find it.\n\nPlease be careful. The night feels heavier than usual, and I
+        can\u2019t shake the feeling that something is watching.\n\nCome back to
+        me soon. \n\n\u2014 Maria\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: triggersTask

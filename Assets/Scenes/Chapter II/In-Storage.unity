@@ -428,6 +428,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note
       objectReference: {fileID: 0}
+    - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
+      propertyPath: noteText
+      value: "The last batch is hidden beneath the hut, just as Father ordered. I
+        told him the air was getting worse down there,\nbut he said the prayers would
+        keep it pure.\n\nBefore sealing the hatch, he whispered them again \u2014
+        Psalm VII, IX, III, IIL\n\nHe said they \u201Clock away the unholy.\u201D\n\nI
+        don\u2019t know what faith protects anymore.\nMaybe believing is all that\u2019s
+        left."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

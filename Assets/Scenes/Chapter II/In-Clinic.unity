@@ -185,13 +185,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: noteText
-      value: "Lord, forgive me.\n\nI have prayed until my knees bled, but the silence
-        will not answer.\n\nHe deserves a father \u2014 someone who can teach him
-        to flourish, to love, to live without shame. But I have taken that chance
-        from him.\n\nI can still hear the Father\u2019s voice reminding me of the
-        Psalms... I, IV, VI, IX... but even those verses feel hollow now.\n\nIf this
-        is the price of mercy, then let me bear it alone.\n\nPlease, let no one else
-        carry my sin."
+      value: "Lord, forgive me. I prayed until my knees split open, but Heaven stayed
+        silent.\n\nHe deserved a father \u2014 not this curse.\nEven the Psalms bring
+        me no peace.\n\nIf this is mercy, let it end with me.\n\n\u2014 N.\n\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: triggersTask

@@ -629,13 +629,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: noteText
-      value: "I found her letter again tonight, the one she left on the chapel chair.\n\nThe
-        ink has nearly vanished, but the verses she listed remain clear \u2014 the
-        same Psalms I once gave her for guidance.\n\nI never told her their true
-        purpose\u2026 only that their order mattered more than the words themselves.\n\nNow
-        the same order echoes in my dreams, as though a door waits to be opened by
-        faith alone.\n\nLord, grant me the strength to face what I sealed away.\n\n\u2014
-        Father Nong"
+      value: "I found her letter again \u2014 the one she left on the chapel chair.
+        The ink has faded, but the verses remain: I, IV, VI, IX\n\nI told her they
+        were prayers of protection. I never told her what they truly sealed.\n\nNow,
+        I hear them again in my sleep. Lord, give me strength to face what I buried
+        beneath Your house.\n\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: triggersTask
