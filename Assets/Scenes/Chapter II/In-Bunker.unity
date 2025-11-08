@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 51b74d7bad397457d883c5940f7664d8, type: 2}
@@ -861,6 +861,16 @@ PrefabInstance:
     - target: {fileID: 5584607345144154889, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: m_Name
       value: Note
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
+      propertyPath: noteText
+      value: "I found her beneath the altar, hands folded, eyes closed as if in prayer.
+        The rosary was wrapped so tightly around her wrists it drew blood.\r\n\r\nThere
+        was no fever left in her, only peace\u2026 or something that looked like
+        it.\r\n\r\nShe confessed before she went, said she could no longer carry
+        the weight of what she had taken from God. I could not speak. I only listened
+        as she begged for forgiveness no one could give.\r\n\r\n\u201CDeliver me,
+        O Lord, from the life I denied.\u201D\r\n\r\n\u2014 Father Nong"
       objectReference: {fileID: 0}
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: triggersTask

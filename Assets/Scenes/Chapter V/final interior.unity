@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4356171184245790834, guid: 8889d42684846c64890ad44cd2edfab9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.99
+      value: -9.42
       objectReference: {fileID: 0}
     - target: {fileID: 4356171184245790834, guid: 8889d42684846c64890ad44cd2edfab9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -678,7 +678,6 @@ GameObject:
   - component: {fileID: 1507810864}
   - component: {fileID: 1507810863}
   - component: {fileID: 1507810862}
-  - component: {fileID: 1507810861}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -686,28 +685,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1507810861
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507810860}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1507810862
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1218,13 +1195,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112291051}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -12.41, y: 2.46, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 797583155}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &2139045595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1525,11 +1502,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: noteText
-      value: "My love,\n\nIf you\u2019re reading this, you must already be on your
-        way to the chapel. You left the key somewhere here \u2014 I\u2019m sure you\u2019ll
-        find it.\n\nPlease be careful. The night feels heavier than usual, and I
-        can\u2019t shake the feeling that something is watching.\n\nCome back to
-        me soon. \n\n\u2014 Maria\n\n"
+      value: "My dearest Christos,\r\n\r\nI prayed for the child we lost, but Heaven
+        stayed silent. I told myself it was mercy \u2014 that I spared us both another
+        mouth we could not feed. But each night, I hear him crying where there is
+        no sound.\r\n\r\nYou said faith could forgive any sin. I believed you. I
+        prayed until my hands trembled, yet I still feel the blood on them.\r\n\r\nI
+        cannot bear to ask you to forgive me too. So I\u2019ll lay my guilt before
+        Him, and let the Lord decide if I am mother or murderer.\r\n\r\nIf you find
+        me, don\u2019t pray for me. Just remember that I loved you \u2014 and the
+        child I never met.\r\n\r\n\u2014 Maria"
       objectReference: {fileID: 0}
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: triggersTask
@@ -1537,7 +1518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894391949465822486, guid: 0ff8d03a4956b7e49be4fff4ffd3ad12, type: 3}
       propertyPath: taskIndexToTrigger
-      value: 3
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
