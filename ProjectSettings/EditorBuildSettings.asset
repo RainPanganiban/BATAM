@@ -38,6 +38,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter II/In-Tunnel.unity
     guid: b58896246482de34fa62263573d81da5
+  - enabled: 1
+    path: Assets/Scenes/Chapter V/Inside2.unity
+    guid: 758bc273d0798064a9c1f6445cd19c3f
+  - enabled: 1
+    path: Assets/Scenes/Chapter V/final interior.unity
+    guid: c20c214dae256c443ba738b76a4bc117
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

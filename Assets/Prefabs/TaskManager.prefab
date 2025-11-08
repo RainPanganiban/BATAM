@@ -543,6 +543,11 @@ MonoBehaviour:
     - "There\u2019s something hidden here, it has to lead somewhere."
     - Enter the secret passage.
     - Whatever he wrote, it might be the key.
+    - Find out what happened.
+    - Find the Gate key.
+    - Open the locked gate.
+    - Enter your house.
+    - Read Maria's suicide note.
 --- !u!114 &7396709839566333394
 MonoBehaviour:
   m_ObjectHideFlags: 0
